@@ -3,6 +3,7 @@ import React from "react";
 
 // Importing Components
 import { Card, Row } from "react-bootstrap";
+import Rating from "../Components/Rating";
 
 // Functional Component
 const Product = ({ product }) => {
@@ -22,9 +23,7 @@ const Product = ({ product }) => {
 
       {/* Product Rating */}
       <Card.Text as="div">
-        <div className="my-3">
-          {product.rating} from {product.numReviews} reviews
-        </div>
+        <Rating rating={product.rating} numReviews={product.numReviews} />
       </Card.Text>
 
       {/* Product Price */}
