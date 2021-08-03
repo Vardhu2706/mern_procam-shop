@@ -1,0 +1,19 @@
+{
+  "name": "procam_shop",
+  "version": "1.0.0",
+  "description": "MERN E-Commerce App for camera gear.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vardhu2706/mern_procam-shop.git"
+  },
+  "author": "Vardhaman Ayyagari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vardhu2706/mern_procam-shop/issues"
+  },
+  "homepage": "https://github.com/Vardhu2706/mern_procam-shop#readme"
+}

@@ -1,4 +1,17 @@
 const products = [
+  // Cameras
+
+
+  // Camera Lenses
+
+
+  // Action Cameras
+
+
+  // Pro Audio
+
+
+  // Gimbals & Stabilizers
   {
     _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",

@@ -2,9 +2,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Image,
+  ListGroup,
+  Card,
+  Button,
+  Tabs,
+  Tab,
+  Carousel,
+} from "react-bootstrap";
 import Rating from "../Components/Rating";
-import products from "../products";
+import products from "../products_new";
 
 // Functional Component
 const ProductScreen = ({ match }) => {
@@ -19,10 +29,16 @@ const ProductScreen = ({ match }) => {
 
       {/* Body */}
       <Row>
-        <Col md={6}>
-          <Image src={product.image} alt={product.name} fluid />
+        <Col md={5}>
+          <Carousel pause="hover" className="bg-light main_carousel" fade>
+            {product.showcase.map((path) => (
+              <Carousel.Item key={path}>
+                <Image src={path} alt={product.name} fluid />
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </Col>
-        <Col md={3}>
+        <Col md={4}>
           <ListGroup variant="flush">
             {/* Product Name */}
             <ListGroup.Item>
@@ -38,7 +54,10 @@ const ProductScreen = ({ match }) => {
             <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
 
             {/* Description */}
-            <ListGroup.Item>Description: {product.description}</ListGroup.Item>
+            <ListGroup.Item>
+              <h5>Features:</h5>
+              <p>{product.features}</p>
+            </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
@@ -78,6 +97,20 @@ const ProductScreen = ({ match }) => {
           </Card>
         </Col>
       </Row>
+      <Row>
+        <Tabs
+          defaultActiveKey="description"
+          id="uncontrolled-tab-example"
+          className="my-3"
+        >
+          <Tab eventKey="description" title="Description">
+            {product.description}
+          </Tab>
+          <Tab eventKey="specifications" title="Specifications"></Tab>
+          <Tab eventKey="reviews" title="Reviews"></Tab>
+        </Tabs>
+      </Row>
+      <Row>{/* Add Suggested */}</Row>
     </>
   );
 };

@@ -9,3 +9,8 @@ h3 {
 .rating span {
   margin: 0.1rem;
 }
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
