@@ -2,7 +2,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// Importing Components/ Screens
 import { Container } from "react-bootstrap";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";

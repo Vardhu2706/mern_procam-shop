@@ -1,7 +1,6 @@
 // Importing Helpers
 import React from "react";
 
-// Importing Components/Files
 import { Row, Col } from "react-bootstrap";
 import products from "../products";
 import Product from "../Components/Product";

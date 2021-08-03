@@ -1,7 +1,6 @@
 // Importing Helpers
 import React from "react";
 
-// Importing Components
 import { Container, Row, Col } from "react-bootstrap";
 
 // Functional Component
