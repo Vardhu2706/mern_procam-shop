@@ -12,9 +12,37 @@ import {
   Tabs,
   Tab,
   Carousel,
+  Table,
 } from "react-bootstrap";
 import Rating from "../Components/Rating";
 import products from "../products_new";
+
+const FeaturesTable = ({ features }) => {
+  return (
+    <>
+      <Table striped bordered size="sm" responsive className="table-responsive">
+        <tbody>
+          {Object.entries(features).map((feature) => {
+            return (
+              <tr>
+                {feature[0].length !== 1 ? (
+                  <td>
+                    <h6 className="feat">{feature[0]}</h6>
+                  </td>
+                ) : (
+                  <></>
+                )}
+                <td>
+                  <h6>{feature[1]}</h6>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </Table>
+    </>
+  );
+};
 
 // Functional Component
 const ProductScreen = ({ match }) => {
@@ -56,7 +84,8 @@ const ProductScreen = ({ match }) => {
             {/* Description */}
             <ListGroup.Item>
               <h5>Features:</h5>
-              <p>{product.features}</p>
+              {/* <p>{product.features}</p> */}
+              <FeaturesTable features={product.features} />
             </ListGroup.Item>
           </ListGroup>
         </Col>

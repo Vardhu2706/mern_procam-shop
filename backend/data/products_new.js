@@ -509,4 +509,4 @@ const products = [
   // Gimbals & Stabilizers
 ];
 
-export default products;
+module.exports = products;

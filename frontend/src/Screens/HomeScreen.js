@@ -1,13 +1,25 @@
 // Importing Helpers
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import { Row, Col } from "react-bootstrap";
-import products from "../products_new";
+// import Socials from "../Components/Socials";
 import Product from "../Components/Product";
-import Socials from '../Components/Socials'
 
 // Functional Component
 const HomeScreen = () => {
+  // State Variables
+  const [products, setProducts] = useState([]);
+
+  // UseEffect Lifecycle Method
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get("/api/featured-products");
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
   return (
     <>
       <h1>Featured Products</h1>
@@ -18,9 +30,7 @@ const HomeScreen = () => {
           </Col>
         ))}
       </Row>
-      <Row>
-
-      </Row>
+      <Row></Row>
     </>
   );
 };

@@ -14,3 +14,11 @@ h3 {
 .carousel-control-prev {
   filter: invert(100%);
 }
+
+h6.feat {
+  font-weight: bold;
+}
+
+.table-responsive {
+  max-height: 300px;
+}
