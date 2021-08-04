@@ -17,11 +17,7 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {/* Categories Dropdown */}
-              <NavDropdown
-                id="nav-dropdown-dark"
-                title="Categories"
-                menuVariant="dark"
-              >
+              <NavDropdown id="nav-dropdown-dark" title="Categories">
                 <LinkContainer to="/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
@@ -34,13 +30,13 @@ const Header = () => {
                 <LinkContainer to="/pro-audio">
                   <NavDropdown.Item>
                     Pro Audio{" "}
-                    <span class="badge rounded-pill bg-primary">New</span>
+                    <span className="badge rounded-pill bg-primary">New</span>
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/gimbals-stabilizers">
                   <NavDropdown.Item>
                     Gimbals &#38; Stabilizers{" "}
-                    <span class="badge rounded-pill bg-primary">New</span>
+                    <span className="badge rounded-pill bg-primary">New</span>
                   </NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Divider />

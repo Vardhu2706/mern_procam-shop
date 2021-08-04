@@ -9,8 +9,8 @@ const Brands = () => {
   return (
     <div className="my-3">
       <h1>Shop Top Brands</h1>
-      <div class="d-flex flex-column flex-lg-row justify-content-center">
-        <div class="p-2">
+      <div className="d-flex flex-column flex-lg-row justify-content-center">
+        <div className="p-2">
           <LinkContainer to="/products/canon">
             <img
               src="/images/brands/canon.jpg"
@@ -19,7 +19,7 @@ const Brands = () => {
             />
           </LinkContainer>
         </div>
-        <div class="p-2">
+        <div className="p-2">
           <LinkContainer to="/products/canon">
             <img
               style={{ height: "180px", width: "286px" }}
@@ -29,7 +29,7 @@ const Brands = () => {
             />
           </LinkContainer>
         </div>
-        <div class="p-2">
+        <div className="p-2">
           <LinkContainer to="/products/canon">
             <img
               src="/images/brands/olympus.jpg"
@@ -38,7 +38,7 @@ const Brands = () => {
             />
           </LinkContainer>
         </div>
-        <div class="p-2">
+        <div className="p-2">
           <LinkContainer to="/products/canon">
             <img
               src="/images/brands/fujifilm.jpg"

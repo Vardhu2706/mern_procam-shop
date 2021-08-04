@@ -24,7 +24,7 @@ const FeaturesTable = ({ features }) => {
         <tbody>
           {Object.entries(features).map((feature) => {
             return (
-              <tr>
+              <tr key={feature}>
                 {feature[0].length !== 1 ? (
                   <td>
                     <h6 className="feat">{feature[0]}</h6>
@@ -52,7 +52,7 @@ const ProductScreen = ({ match }) => {
     <>
       {/* Back Button */}
       <Link className="btn btn-outline-dark my-3" to="/">
-        <i class="fas fa-angle-left"></i> Go Back
+        <i className="fas fa-angle-left"></i> Go Back
       </Link>
 
       {/* Body */}
