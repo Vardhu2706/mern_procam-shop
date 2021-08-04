@@ -1,5 +1,5 @@
 // importing Helpers
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -15,7 +15,8 @@ import {
   Table,
 } from "react-bootstrap";
 import Rating from "../Components/Rating";
-import products from "../products_new";
+
+import axios from "axios";
 
 const FeaturesTable = ({ features }) => {
   return (
@@ -46,7 +47,15 @@ const FeaturesTable = ({ features }) => {
 
 // Functional Component
 const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+      setProduct(data);
+    };
+    fetchProduct();
+  }, []);
 
   return (
     <>
@@ -58,13 +67,17 @@ const ProductScreen = ({ match }) => {
       {/* Body */}
       <Row>
         <Col md={5}>
-          <Carousel pause="hover" className="bg-light main_carousel" fade>
-            {product.showcase.map((path) => (
-              <Carousel.Item key={path}>
-                <Image src={path} alt={product.name} fluid />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          {product.showcase ? (
+            <Carousel pause="hover" className="bg-light main_carousel" fade>
+              {product.showcase.map((path) => (
+                <Carousel.Item key={path}>
+                  <Image src={path} alt={product.name} fluid />
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          ) : (
+            <></>
+          )}
         </Col>
         <Col md={4}>
           <ListGroup variant="flush">
@@ -79,7 +92,11 @@ const ProductScreen = ({ match }) => {
             <ListGroup.Item>
               <h5>Features:</h5>
               {/* <p>{product.features}</p> */}
-              <FeaturesTable features={product.features} />
+              {product.features ? (
+                <FeaturesTable features={product.features} />
+              ) : (
+                <></>
+              )}
             </ListGroup.Item>
           </ListGroup>
         </Col>

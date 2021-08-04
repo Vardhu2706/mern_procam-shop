@@ -12,7 +12,6 @@ const HomeScreen = () => {
   // State Variables
   const [products, setProducts] = useState([]);
 
-  // UseEffect Lifecycle Method
   useEffect(() => {
     const fetchProducts = async () => {
       const { data } = await axios.get("/api/featured-products");
@@ -21,6 +20,7 @@ const HomeScreen = () => {
 
     fetchProducts();
   }, []);
+
   return (
     <>
       <h1>Featured Products</h1>

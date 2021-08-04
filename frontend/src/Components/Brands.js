@@ -1,7 +1,6 @@
 // Importing Helpers
 import React from "react";
 
-import { Row, Col, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 // Functional Component
