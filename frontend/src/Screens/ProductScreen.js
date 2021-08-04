@@ -74,13 +74,7 @@ const ProductScreen = ({ match }) => {
             </ListGroup.Item>
 
             {/* Rating */}
-            <ListGroup.Item>
-              <Rating rating={product.rating} numReviews={product.numReviews} />
-            </ListGroup.Item>
-
-            {/* Price */}
-            <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-
+            {/*  */}
             {/* Description */}
             <ListGroup.Item>
               <h5>Features:</h5>
@@ -93,6 +87,12 @@ const ProductScreen = ({ match }) => {
           <Card>
             <ListGroup variant="flush">
               {/* Price */}
+              <ListGroup.Item className="text-center">
+                <Rating
+                  rating={product.rating}
+                  numReviews={product.numReviews}
+                />
+              </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>

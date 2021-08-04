@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { Row, Col } from "react-bootstrap";
-// import Socials from "../Components/Socials";
+import Socials from "../Components/Socials";
 import Product from "../Components/Product";
+import Brands from "../Components/Brands";
 
 // Functional Component
 const HomeScreen = () => {
@@ -30,7 +31,14 @@ const HomeScreen = () => {
           </Col>
         ))}
       </Row>
-      <Row></Row>
+      {/* Socials */}
+      <Row>
+        <Socials />
+      </Row>
+      {/* Shop By Brand */}
+      <Row>
+        <Brands />
+      </Row>
     </>
   );
 };
