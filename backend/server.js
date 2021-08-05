@@ -26,6 +26,14 @@ app.get("/api/featured-products", (req, res) => {
   res.json(featured_products);
 });
 
+// // Custom Req
+// app.get("/api/:category", (req, res) => {
+//   const requested_products = products.filter(
+//     (product) => product.category === category
+//   );
+//   res.json(requested_products);
+// });
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(

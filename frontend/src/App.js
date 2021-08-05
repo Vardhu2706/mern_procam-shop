@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
+import CustomPage from "./Screens/CustomPage";
 
 // Functional Component
 const App = () => {
@@ -16,7 +17,32 @@ const App = () => {
       <main className="py-3 ">
         <Container>
           <Route path="/" exact component={HomeScreen} />
-          <Route path="/product/:id" component={ProductScreen} />
+          <Route path="/product/:id" exact component={ProductScreen} />
+          {/* <Route
+            path="/cameras"
+            exact
+            component={() => <CustomPage flag="/cameras" />}
+          />
+          <Route
+            path="/lenses"
+            exact
+            component={() => <CustomPage flag="/cameras" />}
+          />
+          <Route
+            path="/audio"
+            exact
+            component={() => <CustomPage flag="/audio" />}
+          />
+          <Route
+            path="/action"
+            exact
+            component={() => <CustomPage flag="/action" />}
+          />
+          <Route
+            path="/all"
+            exact
+            component={() => <CustomPage flag="/all" />}
+          /> */}
         </Container>
       </main>
 

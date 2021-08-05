@@ -21,7 +21,7 @@ const Header = () => {
                 <LinkContainer to="/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/camera-lenses">
+                <LinkContainer to="/lenses">
                   <NavDropdown.Item>Camera Lens</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/action-cameras">
@@ -30,12 +30,6 @@ const Header = () => {
                 <LinkContainer to="/pro-audio">
                   <NavDropdown.Item>
                     Pro Audio{" "}
-                    <span className="badge rounded-pill bg-primary">New</span>
-                  </NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/gimbals-stabilizers">
-                  <NavDropdown.Item>
-                    Gimbals &#38; Stabilizers{" "}
                     <span className="badge rounded-pill bg-primary">New</span>
                   </NavDropdown.Item>
                 </LinkContainer>

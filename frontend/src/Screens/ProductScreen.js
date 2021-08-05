@@ -64,6 +64,7 @@ const ProductScreen = ({ match }) => {
         <i className="fas fa-angle-left"></i> Go Back
       </Link>
 
+      <h2 className="my-3">{product.name}</h2>
       {/* Body */}
       <Row>
         <Col md={5}>
@@ -81,11 +82,6 @@ const ProductScreen = ({ match }) => {
         </Col>
         <Col md={4}>
           <ListGroup variant="flush">
-            {/* Product Name */}
-            <ListGroup.Item>
-              <h3>{product.name}</h3>
-            </ListGroup.Item>
-
             {/* Rating */}
             {/*  */}
             {/* Description */}
@@ -113,9 +109,13 @@ const ProductScreen = ({ match }) => {
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
-                  <Col>
-                    <strong>₹{product.price}</strong>
-                  </Col>
+                  {product.price ? (
+                    <Col>
+                      <strong>₹{product.price.toLocaleString("en-IN")}</strong>
+                    </Col>
+                  ) : (
+                    <></>
+                  )}
                 </Row>
               </ListGroup.Item>
 
@@ -144,15 +144,10 @@ const ProductScreen = ({ match }) => {
         </Col>
       </Row>
       <Row>
-        <Tabs
-          defaultActiveKey="description"
-          id="uncontrolled-tab-example"
-          className="my-3"
-        >
-          <Tab eventKey="description" title="Description">
+        <Tabs defaultActiveKey="reviews" className="my-3 ms-3">
+          <Tab eventKey="reviews" title="Reviews">
             {product.description}
           </Tab>
-          <Tab eventKey="reviews" title="Reviews"></Tab>
         </Tabs>
       </Row>
       <Row>{/* Add Suggested */}</Row>
