@@ -114,7 +114,7 @@ const ProductScreen = ({ match }) => {
                 <Row>
                   <Col>Price:</Col>
                   <Col>
-                    <strong>${product.price}</strong>
+                    <strong>₹{product.price}</strong>
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -152,7 +152,6 @@ const ProductScreen = ({ match }) => {
           <Tab eventKey="description" title="Description">
             {product.description}
           </Tab>
-          <Tab eventKey="specifications" title="Specifications"></Tab>
           <Tab eventKey="reviews" title="Reviews"></Tab>
         </Tabs>
       </Row>
