@@ -35,7 +35,7 @@ const Header = () => {
                 </LinkContainer>
                 <NavDropdown.Divider />
                 <LinkContainer to="/all-products">
-                  <NavDropdown.Item>View All</NavDropdown.Item>
+                  <NavDropdown.Item>All Products</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>
               <LinkContainer to="/cart">

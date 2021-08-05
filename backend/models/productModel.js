@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const reviewSchema = mongoose.Schema(
   {
@@ -7,7 +7,7 @@ const reviewSchema = mongoose.Schema(
       required: true,
     },
     rating: {
-      type: number,
+      type: Number,
       required: true,
     },
     comment: {
@@ -20,7 +20,7 @@ const reviewSchema = mongoose.Schema(
   }
 );
 
-const productSchema = mongo.Schema(
+const productSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,

@@ -1,6 +1,6 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
-const orderSchema = mongo.Schema(
+const orderSchema = mongoose.Schema(
   {
     // User who ordered
     user: {
@@ -86,7 +86,7 @@ const orderSchema = mongo.Schema(
       default: false,
     },
     paidAt: {
-      type: Data,
+      type: Date,
     },
     isDelivered: {
       type: Boolean,

@@ -1,7 +1,6 @@
 const products = [
   // Cameras - Point & Shoot Cameras
   {
-    _id: "1",
     name: "Olympus Tough TG-6 Digital Camera",
     image: "/images/cameras/Olympus-Tough-TG-6-Black_01.jpg",
     showcase: [
@@ -26,7 +25,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "2",
     name: "Nikon COOLPIX B600 Digital Camera",
     image: "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_01.jpg",
     showcase: [
@@ -51,7 +49,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "3",
     name: "Fujifilm X100F Digital Camera",
     image: "/images/cameras/Fujifilm-X100F-Digital-Camera-Black_01.jpg",
     showcase: [
@@ -78,7 +75,6 @@ const products = [
 
   // Cameras - DSLR Cameras
   {
-    _id: "4",
     name: "Canon 5D Mark IV Camera",
     image: "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_01.jpg",
     showcase: [
@@ -105,7 +101,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "5",
     name: "Canon 6D Mark II Camera",
     image: "/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_01.jpg",
     showcase: [
@@ -129,7 +124,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "6",
     name: "Canon 77D Camera Kit",
     image: "/images/cameras/Canon-77D-Kit-EF-S18-55mm_01.jpg",
     showcase: [
@@ -155,7 +149,6 @@ const products = [
 
   // Cameras - Mirrorless Camera
   {
-    _id: "7",
     name: "Nikon Z FC Mirrorless Camera",
     image: "/images/cameras/Nikon-Z-FC-Mirrorless-Camera_01.jpg",
     showcase: [
@@ -179,7 +172,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "8",
     name: "Panasonic Lumix DC-S1R Mirrorless Camera",
     image:
       "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_01.jpg",
@@ -208,7 +200,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "9",
     name: "Panasonic Lumix DMC-G85K Mirrorless Camera",
     image: "/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_02.jpg",
     showcase: [
@@ -235,7 +226,6 @@ const products = [
 
   // Cameras - Medium Format
   {
-    _id: "10",
     name: "Fujifilm GFX 100S Medium Format Mirrorless Camera",
     image:
       "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_01.jpg",
@@ -262,7 +252,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "11",
     name: "Fujifilm GFX 100 Medium Format Mirrorless Camera ",
     image:
       "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-01.jpg",
@@ -288,7 +277,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "12",
     name: "Fujifilm GFX 50R Medium Format Mirrorless Camera",
     image:
       "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_01.jpg",
@@ -317,7 +305,6 @@ const products = [
 
   // Cameras - Instant Cameras
   {
-    _id: "13",
     name: "Fujifilm INSTAX Mini LiPlay Hybrid Instant Camera",
     image:
       "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_01.jpg",
@@ -344,7 +331,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "14",
     name: "Fujifilm INSTAX SQUARE SQ6 Camera",
     image:
       "/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_01.jpg",
@@ -369,7 +355,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "15",
     name: "Fujifilm INSTAX Mini 70 Instant Film Camera",
     image:
       "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-01.jpg",
@@ -398,7 +383,6 @@ const products = [
 
   // Cameras - Video Cameras
   {
-    _id: "16",
     name: "Blackmagic Design Studio Camera 4K Pro",
     image: "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_01.jpg",
     showcase: [
@@ -425,7 +409,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "17",
     name: "Sony FX3 Full-Frame Cinema Camera",
     image: "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_01.jpg",
     showcase: [
@@ -459,7 +442,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "18",
     name: "Panasonic AG-CX8ED 4K Professional Video Camera",
     image:
       "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_01.jpg",
@@ -494,7 +476,6 @@ const products = [
 
   // Lenses - DSLR Lens
   {
-    _id: "19",
     name: "Canon EF-S 18-55mm f/4-5.6 IS STM Lens",
     image: "/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-01.jpg",
     showcase: [
@@ -519,7 +500,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "20",
     name: "Nikon AF-S DX 16-85mm f/3.5-5.6G ED VR Lens",
     image: "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-01.jpg",
     showcase: [
@@ -545,7 +525,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "21",
     name: "Sigma 500mm f/4 DG OS HSM Sports Lens",
     image:
       "/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
@@ -573,7 +552,6 @@ const products = [
 
   // Lenses - Mirrorless Lenses
   {
-    _id: "22",
     name: "Fujifilm XF 18mm f/1.4 R LM WR Lens",
     image: "/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-01.jpg",
     showcase: [
@@ -599,7 +577,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "23",
     name: "Nikon Z Micro 50mm f/2.8 Lens",
     image: "/images/lenses/Nikon-Z-Micro-50mm-f2-01.jpg",
     showcase: [
@@ -624,7 +601,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "24",
     name: "Nikon Z Micro 105mm f/2.8 VR S Lens",
     image: "/images/lenses/Nikon-Z-Micro-105mm-f2-01.jpg",
     showcase: [
@@ -651,7 +627,6 @@ const products = [
 
   // Lenses - Medium Format
   {
-    _id: "25",
     name: "Fujifilm GF 80mm f/1.7 R WR Lens",
     image: "/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_01.jpg",
     showcase: [
@@ -676,7 +651,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "26",
     name: "Fujifilm GF 50mm F/3.5 R LM WR Lens",
     image: "/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_01.jpg",
     showcase: [
@@ -702,7 +676,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "27",
     name: "Fujifilm GF 32-64mm f/4 R LM WR Lens",
     image: "/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_01.jpg",
     showcase: [
@@ -731,7 +704,6 @@ const products = [
 
   // Lenses - Filters & Adapters
   {
-    _id: "28",
     name: "Nisi 67mm V.ND 1.5-5 stop Filter",
     image:
       "/images/lenses/NiSi-67mm-Variable-Neutral-Density-0.45-to-1.5-Filter.jpg",
@@ -760,7 +732,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "29",
     name: "Hoya 52mm UX UV Filter",
     image: "/images/lenses/Hoya-52mm-UX-UV-Filter-01.jpg",
     showcase: [
@@ -782,7 +753,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "30",
     name: "NiSi V6 Pro Starter Filter Kit III with Circular Polarizer Filter",
     image:
       "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_01.jpg",
@@ -822,7 +792,6 @@ const products = [
 
   // Action Cameras - Cameras
   {
-    _id: "31",
     name: "Insta360 GO2 Action Camera",
     image: "/images/action/Insta360-GO2-Action-Camera-01.jpg",
     showcase: [
@@ -849,7 +818,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "32",
     name: "GoPro HERO9 Black Action Camera",
     image: "/images/action/GoPro-HERO9-Black-Action-Camera-01.jpg",
     showcase: [
@@ -876,7 +844,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "33",
     name: "Insta360 One R (One Inch Leica Edition) Action Camera",
     image: "/images/action/Insta360-ONE-R-1-Edition-01.jpg",
     showcase: [
@@ -903,7 +870,6 @@ const products = [
 
   // Action Cameras - Accessories
   {
-    _id: "34",
     name: "Insta360 One R Lens Guard for 360 Dual-Lens Mod",
     image:
       "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_01.jpg",
@@ -927,7 +893,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "35",
     name: "Insta360 ONE R Boosted Battery Base",
     image: "/images/action/Insta360-ONE-R-Boosted-Battery-Base-01.jpg",
     showcase: [
@@ -949,7 +914,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "36",
     name: "Ulanzi Gp-6 Cold Shoe for Action Camera",
     image: "/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-01.jpg",
     showcase: [
@@ -972,7 +936,6 @@ const products = [
 
   // Pro Audio - Microphones
   {
-    _id: "37",
     name: "RollMaster 4K Wireless Video Transmission System",
     image:
       "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-01.jpg",
@@ -1006,7 +969,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "38",
     name: "Rode Vlogger Filmmaking Kit",
     image: "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-01.jpg",
     showcase: [
@@ -1039,7 +1001,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "39",
     name: "Sony LV-1 Stereo Lavalier Microphone",
     image: "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-01.jpg",
     showcase: [
@@ -1067,7 +1028,6 @@ const products = [
 
   // Pro Audio - Recorders
   {
-    _id: "40",
     name: "Tascam DR-22WL Portable Handheld Recorder with Wi-Fi",
     image: "/images/audio/Tascam-DR-22WL_01.jpg",
     showcase: [
@@ -1098,7 +1058,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "41",
     name: "Zoom H8 Recorder",
     image:
       "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-01.jpg",
@@ -1129,7 +1088,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "42",
     name: "LiveU Solo SDI/HDMI Video/Audio Encoder",
     image: "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
     showcase: [
@@ -1156,7 +1114,6 @@ const products = [
 
   // Pro Audio - Speakers/Headphones
   {
-    _id: "43",
     name: "Sennheiser HD 215 Stereo Headphones",
     image: "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_01.jpg",
     showcase: [
@@ -1181,7 +1138,6 @@ const products = [
     featured: true,
   },
   {
-    _id: "44",
     name: "Sony MHC-V21D Bluetooth Wireless Music System",
     image: "/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-01.jpg",
     showcase: [
@@ -1210,7 +1166,6 @@ const products = [
     featured: false,
   },
   {
-    _id: "45",
     name: "Sennheiser HD 300 PRO Monitoring Headphones",
     image: "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
     showcase: [
