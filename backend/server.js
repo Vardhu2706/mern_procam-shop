@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-import products from "./data/products_new.js";
 import colors from "colors";
+import productRoutes from "./routes/productRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -13,15 +13,17 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
+// app.get("/api/products", (req, res) => {
+//   res.json(products);
+// });
 
 // Get product by ID
-app.get("/api/products/:id", (req, res) => {
-  const product = products.find((p) => p._id === req.params.id);
-  res.json(product);
-});
+// app.get("/api/products/:id", (req, res) => {
+//   const product = products.find((p) => p._id === req.params.id);
+//   res.json(product);
+// });
+
+app.use("/api/products", productRoutes);
 
 // // Get featured products
 app.get("/api/featured-products", (req, res) => {
