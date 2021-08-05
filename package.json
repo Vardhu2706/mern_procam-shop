@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MERN E-Commerce App for camera gear.",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/Vardhu2706/mern_procam-shop#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
