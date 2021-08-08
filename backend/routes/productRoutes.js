@@ -18,7 +18,7 @@ router.get(
   })
 );
 
-// @desc Fetch products based on category
+// @desc Fetch products based on category || brand
 // @route GET /api/products/filter/:flag
 // @access Public
 router.get(

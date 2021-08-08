@@ -18,7 +18,7 @@ const Header = () => {
             <Nav className="ms-auto">
               {/* Categories Dropdown */}
               <NavDropdown id="nav-dropdown-dark" title="Categories">
-                <LinkContainer to="/cameras">
+                <LinkContainer to="/filter/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/lenses">
