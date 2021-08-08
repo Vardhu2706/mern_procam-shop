@@ -7,7 +7,6 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
-import CustomPage from "./Screens/CustomPage";
 
 // Functional Component
 const App = () => {

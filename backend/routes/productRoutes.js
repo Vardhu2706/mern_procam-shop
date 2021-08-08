@@ -10,25 +10,8 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     const products = await Product.find({});
-    res.json(products);
-  })
-);
-
-// @desc Fetch Featured Products
-// @route GET /api/featured-products
-// @access Public
-router.get(
-  "/spotlight",
-  asyncHandler(async (req, res) => {
-    // const featured_products = await Product.filter((p) => p.featured === true);
-    // console.log(featured_products);
-    // if (featured_products) {
-    //   res.json(featured_products);
-    // } else {
-    //   res.status(404);
-    //   throw new Error("Missing Featured-Products");
-    // }
-    console.log(Product);
+    res.json(products.filter((p) => p.featured));
+    // res.json(products);
   })
 );
 
