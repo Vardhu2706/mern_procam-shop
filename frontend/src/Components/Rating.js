@@ -1,6 +1,6 @@
 // Importing Helpers
 import React from "react";
-import PropTypes from "prop-types";
+
 
 // Functional Component
 const Rating = ({ rating, numReviews, color }) => {
@@ -77,11 +77,4 @@ export default Rating;
 // Default Prop Values
 Rating.defaultProps = {
   color: "gold",
-};
-
-// Specifying PropTypes
-Rating.propTypes = {
-  rating: PropTypes.number.isRequired,
-  numReviews: PropTypes.number.isRequired,
-  colors: PropTypes.string,
 };

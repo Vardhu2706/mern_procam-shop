@@ -16,35 +16,9 @@ const App = () => {
       <main className="py-3 ">
         <Container>
           <Route path="/" exact component={HomeScreen} />
-          <Route path="/product/:id" exact component={ProductScreen} />
-          {/* <Route
-            path="/cameras"
-            exact
-            component={() => <CustomPage flag="/cameras" />}
-          />
-          <Route
-            path="/lenses"
-            exact
-            component={() => <CustomPage flag="/cameras" />}
-          />
-          <Route
-            path="/audio"
-            exact
-            component={() => <CustomPage flag="/audio" />}
-          />
-          <Route
-            path="/action"
-            exact
-            component={() => <CustomPage flag="/action" />}
-          />
-          <Route
-            path="/all"
-            exact
-            component={() => <CustomPage flag="/all" />}
-          /> */}
+          <Route path="/product/:id" exact component={ProductScreen} />{" "}
         </Container>
       </main>
-
       <Footer />
     </Router>
   );

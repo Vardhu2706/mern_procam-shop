@@ -9,17 +9,12 @@ connectDB();
 
 const app = express();
 
+
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
 app.use("/api/products", productRoutes);
-
-// // // Get featured products
-// app.get("/api/featured-products", (req, res) => {
-//   const featured_products = products.filter((product) => product.featured);
-//   res.json(featured_products);
-// });
 
 app.use(notFound);
 
