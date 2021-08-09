@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Socials from "../Components/Socials";
 import Product from "../Components/Product";
 import Brands from "../Components/Brands";
+import Loader from "../Components/Loader";
+import Message from "../Components/Message";
 
 // Functional Component
 const HomeScreen = () => {
@@ -22,9 +24,9 @@ const HomeScreen = () => {
     <>
       <h2 className="my-2">Featured Products</h2>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant="danger">{error}</Message>
       ) : (
         <Row>
           {products.map((product) => (
