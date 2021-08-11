@@ -15,7 +15,8 @@ import {
   Table,
 } from "react-bootstrap";
 import Rating from "../Components/Rating";
-
+import { useDispatch, useSelector } from "react-redux";
+import { listProductDetails } from "../Actions/productActions";
 import axios from "axios";
 
 const FeaturesTable = ({ features }) => {
@@ -47,7 +48,7 @@ const FeaturesTable = ({ features }) => {
 
 // Functional Component
 const ProductScreen = ({ match }) => {
-  const [product, setProduct] = useState({});
+  const [productDetails, setProduct] = useState({});
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -64,15 +65,15 @@ const ProductScreen = ({ match }) => {
         <i className="fas fa-angle-left"></i> Go Back
       </Link>
 
-      <h2 className="my-3">{product.name}</h2>
+      <h2 className="my-3">{productDetails.name}</h2>
       {/* Body */}
       <Row>
         <Col md={5}>
-          {product.showcase ? (
+          {productDetails.showcase ? (
             <Carousel pause="hover" className="bg-light main_carousel" fade>
-              {product.showcase.map((path) => (
+              {productDetails.showcase.map((path) => (
                 <Carousel.Item key={path}>
-                  <Image src={path} alt={product.name} fluid />
+                  <Image src={path} alt={productDetails.name} fluid />
                 </Carousel.Item>
               ))}
             </Carousel>
@@ -87,9 +88,9 @@ const ProductScreen = ({ match }) => {
             {/* Description */}
             <ListGroup.Item>
               <h5>Features:</h5>
-              {/* <p>{product.features}</p> */}
-              {product.features ? (
-                <FeaturesTable features={product.features} />
+              {/* <p>{productDetails.features}</p> */}
+              {productDetails.features ? (
+                <FeaturesTable features={productDetails.features} />
               ) : (
                 <></>
               )}
@@ -102,16 +103,18 @@ const ProductScreen = ({ match }) => {
               {/* Price */}
               <ListGroup.Item className="text-center">
                 <Rating
-                  rating={product.rating}
-                  numReviews={product.numReviews}
+                  rating={productDetails.rating}
+                  numReviews={productDetails.numReviews}
                 />
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
-                  {product.price ? (
+                  {productDetails.price ? (
                     <Col>
-                      <strong>₹{product.price.toLocaleString("en-IN")}</strong>
+                      <strong>
+                        ₹{productDetails.price.toLocaleString("en-IN")}
+                      </strong>
                     </Col>
                   ) : (
                     <></>
@@ -124,7 +127,9 @@ const ProductScreen = ({ match }) => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
+                    {productDetails.countInStock > 0
+                      ? "In Stock"
+                      : "Out Of Stock"}
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -134,7 +139,7 @@ const ProductScreen = ({ match }) => {
                 <Button
                   className="btn-block w-100"
                   type="button"
-                  disabled={product.countInStock === 0}
+                  disabled={productDetails.countInStock === 0}
                 >
                   Add To Cart
                 </Button>
@@ -146,7 +151,7 @@ const ProductScreen = ({ match }) => {
       <Row>
         <Tabs defaultActiveKey="reviews" className="my-3 ms-3">
           <Tab eventKey="reviews" title="Reviews">
-            {product.description}
+            {productDetails.description}
           </Tab>
         </Tabs>
       </Row>

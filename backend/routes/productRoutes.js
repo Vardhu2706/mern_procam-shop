@@ -52,6 +52,7 @@ router.get(
     // Check filter for category
     if (categories.includes(flag)) {
       const filtered_products = products.filter((p) => p.category === flag);
+      console.log(flag);
       if (filtered_products) {
         res.json(filtered_products);
       } else {
@@ -76,7 +77,9 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
+    console.log(req.params.id);
     const product = await Product.findById(req.params.id);
+    console.log(req.params.id);
     if (product) {
       res.json(product);
     } else {
