@@ -17,7 +17,6 @@ import {
 import Rating from "../Components/Rating";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../Actions/productActions";
-import axios from "axios";
 
 const FeaturesTable = ({ features }) => {
   return (
@@ -48,15 +47,23 @@ const FeaturesTable = ({ features }) => {
 
 // Functional Component
 const ProductScreen = ({ match }) => {
-  const [productDetails, setProduct] = useState({});
+  // const [productDetails, setProduct] = useState({});
+
+  // useEffect(() => {
+  //   const fetchProduct = async () => {
+  //     const { data } = await axios.get(`/api/products/${match.params.id}`);
+  //     setProduct(data);
+  //   };
+  //   fetchProduct();
+  // }, [match]);
+
+  const dispatch = useDispatch();
+  const productDetails = useSelector((state) => state.productDetails);
+  const { loading, error, product } = productDetails;
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/products/${match.params.id}`);
-      setProduct(data);
-    };
-    fetchProduct();
-  }, [match]);
+    dispatch(listProductDetails(match.params.id));
+  }, [dispatch, match]);
 
   return (
     <>
@@ -65,15 +72,15 @@ const ProductScreen = ({ match }) => {
         <i className="fas fa-angle-left"></i> Go Back
       </Link>
 
-      <h2 className="my-3">{productDetails.name}</h2>
+      <h2 className="my-3">{product.name}</h2>
       {/* Body */}
       <Row>
         <Col md={5}>
-          {productDetails.showcase ? (
+          {product.showcase ? (
             <Carousel pause="hover" className="bg-light main_carousel" fade>
-              {productDetails.showcase.map((path) => (
+              {product.showcase.map((path) => (
                 <Carousel.Item key={path}>
-                  <Image src={path} alt={productDetails.name} fluid />
+                  <Image src={path} alt={product.name} fluid />
                 </Carousel.Item>
               ))}
             </Carousel>
@@ -88,9 +95,9 @@ const ProductScreen = ({ match }) => {
             {/* Description */}
             <ListGroup.Item>
               <h5>Features:</h5>
-              {/* <p>{productDetails.features}</p> */}
-              {productDetails.features ? (
-                <FeaturesTable features={productDetails.features} />
+              {/* <p>{product.features}</p> */}
+              {product.features ? (
+                <FeaturesTable features={product.features} />
               ) : (
                 <></>
               )}
@@ -103,18 +110,16 @@ const ProductScreen = ({ match }) => {
               {/* Price */}
               <ListGroup.Item className="text-center">
                 <Rating
-                  rating={productDetails.rating}
-                  numReviews={productDetails.numReviews}
+                  rating={product.rating}
+                  numReviews={product.numReviews}
                 />
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
-                  {productDetails.price ? (
+                  {product.price ? (
                     <Col>
-                      <strong>
-                        ₹{productDetails.price.toLocaleString("en-IN")}
-                      </strong>
+                      <strong>₹{product.price.toLocaleString("en-IN")}</strong>
                     </Col>
                   ) : (
                     <></>
@@ -127,9 +132,7 @@ const ProductScreen = ({ match }) => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    {productDetails.countInStock > 0
-                      ? "In Stock"
-                      : "Out Of Stock"}
+                    {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -139,7 +142,7 @@ const ProductScreen = ({ match }) => {
                 <Button
                   className="btn-block w-100"
                   type="button"
-                  disabled={productDetails.countInStock === 0}
+                  disabled={product.countInStock === 0}
                 >
                   Add To Cart
                 </Button>
@@ -151,7 +154,7 @@ const ProductScreen = ({ match }) => {
       <Row>
         <Tabs defaultActiveKey="reviews" className="my-3 ms-3">
           <Tab eventKey="reviews" title="Reviews">
-            {productDetails.description}
+            {product.description}
           </Tab>
         </Tabs>
       </Row>

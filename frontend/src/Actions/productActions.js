@@ -30,7 +30,6 @@ export const listProducts = () => async (dispatch) => {
 };
 
 export const listProductDetails = (id) => async (dispatch) => {
-  console.log("In ListProductDetails");
 
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
