@@ -10,12 +10,12 @@ const Product = ({ product }) => {
   return (
     <Card className="my-3 p-3 rounded">
       {/* Product Image */}
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`} style={{ textDecoration: "none" }}>
         <Card.Img src={product.image} variant="top" />
       </Link>
 
       {/* Product Title */}
-      <Link to={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`} style={{ textDecoration: "none" }}>
         <Card.Title as="div">
           <strong>{product.name}</strong>
         </Card.Title>

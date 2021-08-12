@@ -48,7 +48,7 @@ const FeaturesTable = ({ features }) => {
 
 // Functional Component
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
@@ -142,7 +142,6 @@ const ProductScreen = ({ history, match }) => {
                     <ListGroup.Item>
                       <Row>
                         <Col>Qty:</Col>
-
                         <Col>
                           <Form.Control
                             as="select"
