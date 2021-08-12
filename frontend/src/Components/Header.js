@@ -18,16 +18,16 @@ const Header = () => {
             <Nav className="ms-auto">
               {/* Categories Dropdown */}
               <NavDropdown id="nav-dropdown-dark" title="Categories">
-                <LinkContainer to="/filter/cameras">
+                <LinkContainer to="/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/lenses">
                   <NavDropdown.Item>Camera Lens</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/action-cameras">
+                <LinkContainer to="/action">
                   <NavDropdown.Item>Action Cameras</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/pro-audio">
+                <LinkContainer to="/audio">
                   <NavDropdown.Item>
                     Pro Audio{" "}
                     <span className="badge rounded-pill bg-primary">New</span>

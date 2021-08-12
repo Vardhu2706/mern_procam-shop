@@ -12,6 +12,7 @@ router.get(
     const products = await Product.find({});
     if (products) {
       res.json(products.filter((p) => p.featured));
+      // res.json(products);
     } else {
       throw new Error("Products not found.");
     }

@@ -7,6 +7,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
+import CustomScreen from "./Screens/CustomScreen";
+import CartScreen from "./Screens/CartScreen";
 
 // Functional Component
 const App = () => {
@@ -17,6 +19,7 @@ const App = () => {
         <Container>
           <Route path="/" exact component={HomeScreen} />
           <Route path="/product/:id" component={ProductScreen} />
+          <Route path="/cart/:id?" component={CartScreen} />
         </Container>
       </main>
       <Footer />
