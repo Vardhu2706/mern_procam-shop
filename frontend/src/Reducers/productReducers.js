@@ -40,15 +40,4 @@ export const productDetailsReducer = (
   }
 };
 
-export const filteredProductsReducer = (state = { products: [] }, action) => {
-  switch (action.type) {
-    case FILTERED_PRODUCTS_REQUEST:
-      return { loading: true, products: [] };
-    case FILTERED_PRODUCTS_SUCCESS:
-      return { loading: false, products: action.payload };
-    case FILTERED_PRODUCTS_FAIL:
-      return { loading: false, error: action.payload };
-    default:
-      return state;
-  }
-};
+

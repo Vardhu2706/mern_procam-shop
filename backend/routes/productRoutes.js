@@ -27,6 +27,7 @@ router.get(
   asyncHandler(async (req, res) => {
     const products = await Product.find({});
     const flag = req.params.value;
+    console.log(flag);
     const categories = ["cameras", "lenses", "action", "audio"];
     const brands = [
       "Olympus",

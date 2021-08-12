@@ -1,11 +1,13 @@
 // Importing Helpers
-import React from "react";
+import React, { useEffect, useSelector } from "react";
 
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 // Functional Component
 const Header = () => {
+  // TO-DO : Add items indicator in CART button
+
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
@@ -18,7 +20,7 @@ const Header = () => {
             <Nav className="ms-auto">
               {/* Categories Dropdown */}
               <NavDropdown id="nav-dropdown-dark" title="Categories">
-                <LinkContainer to="/cameras">
+                <LinkContainer to="/filter/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/lenses">

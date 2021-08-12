@@ -7,7 +7,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
-import CustomScreen from "./Screens/CustomScreen";
+
 import CartScreen from "./Screens/CartScreen";
 
 // Functional Component

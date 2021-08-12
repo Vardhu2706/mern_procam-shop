@@ -11,7 +11,7 @@ import {
   Button,
   Card,
 } from "react-bootstrap";
-import { addToCart } from "../Actions/cartActions";
+import { addToCart, removeFromCart } from "../Actions/cartActions";
 
 const CartScreen = ({ match, location, history }) => {
   const productID = match.params.id;
@@ -29,7 +29,7 @@ const CartScreen = ({ match, location, history }) => {
   }, [dispatch, productID, qty]);
 
   const removeFromCartHandler = (id) => {
-    console.log(id);
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -94,6 +94,9 @@ const CartScreen = ({ match, location, history }) => {
                 </Row>
               </ListGroup.Item>
             ))}
+            <Link to="/" className="my-3">
+              Continue shopping
+            </Link>
           </ListGroup>
         )}
       </Col>
