@@ -1,11 +1,13 @@
 // Importing Helpers
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductsByCategory } from "../Actions/productActions";
 import Product from "../Components/Product";
 import { Row, Col } from "react-bootstrap";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
+import Pagination from "../Components/Pagination";
 
 const specifyCategory = (category) => {
   let base = "Shop ";
@@ -25,6 +27,10 @@ const specifyCategory = (category) => {
 const CategoriesScreen = ({ location }) => {
   const category = location.pathname.split("/")[2];
 
+  // TO-DO : Add Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(8);
+
   const dispatch = useDispatch();
   const categoryList = useSelector((state) => state.categoryList);
 
@@ -34,21 +40,51 @@ const CategoriesScreen = ({ location }) => {
     dispatch(listProductsByCategory(category));
   }, [dispatch, category]);
 
+  // Get Current Post
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+
+  const currentProducts = categoryProducts.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  // Paginate
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
+      <Link className="btn btn-outline-dark my-3" to="/">
+        <i className="fas fa-angle-left"></i> Go Back
+      </Link>
       <h2 className="mt-3">{specifyCategory(category)}</h2>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Row>
-          {categoryProducts.map((product) => (
-            <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
+        <>
+          <Row>
+            {currentProducts.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Row>
+            {categoryProducts ? (
+              <Pagination
+                productsPerPage={productsPerPage}
+                totalProducts={categoryProducts.length}
+                paginate={paginate}
+              />
+            ) : (
+              <></>
+            )}
+          </Row>
+        </>
       )}
     </>
   );

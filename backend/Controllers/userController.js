@@ -7,7 +7,10 @@ import User from "../Models/userModel.js";
 
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  res.send(email, password);
+  console.log(email, password);
+  res.send({ email, password });
 });
 
-// 5:14
+export { authUser };
+
+// 7

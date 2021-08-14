@@ -77,10 +77,15 @@ const ProductScreen = ({ history, match }) => {
           <Row>
             <Col md={5}>
               {product.showcase ? (
-                <Carousel pause="hover" className="bg-light main_carousel" fade>
+                <Carousel pause="hover" className="bg-light carousel">
                   {product.showcase.map((path) => (
-                    <Carousel.Item key={path}>
-                      <Image src={path} alt={product.name} fluid />
+                    <Carousel.Item key={path} className="carousel-item">
+                      <Image
+                        src={path}
+                        alt={product.name}
+                        fluid
+                        className="d-block w-100"
+                      />
                     </Carousel.Item>
                   ))}
                 </Carousel>
@@ -107,7 +112,6 @@ const ProductScreen = ({ history, match }) => {
             <Col md={3}>
               <Card>
                 <ListGroup variant="flush">
-                  {/* Price */}
                   <ListGroup.Item className="text-center">
                     <Rating
                       rating={product.rating}
