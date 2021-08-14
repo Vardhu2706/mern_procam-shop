@@ -22,7 +22,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      <h2 className="my-2">Featured Products</h2>
+      <h2 className="mt-3">Featured Products</h2>
       {loading ? (
         <Loader />
       ) : error ? (

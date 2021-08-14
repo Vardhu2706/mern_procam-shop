@@ -58,7 +58,7 @@ const CartScreen = ({ match, location, history }) => {
                   <Col md={3}>
                     <Link
                       style={{ textDecoration: "none" }}
-                      to={`/product${item.product}`}
+                      to={`/product/${item.product}`}
                     >
                       {item.name}
                     </Link>
@@ -68,7 +68,7 @@ const CartScreen = ({ match, location, history }) => {
                     <Form.Control
                       as="select"
                       value={item.qty}
-                      className="form-select"
+                      className="form-select my-2"
                       onChange={(e) =>
                         dispatch(
                           addToCart(item.product, Number(e.target.value))
@@ -84,6 +84,7 @@ const CartScreen = ({ match, location, history }) => {
                   </Col>
                   <Col md={1}>
                     <Button
+                      className="my-2"
                       type="button"
                       variant="light"
                       onClick={() => removeFromCartHandler(item.product)}

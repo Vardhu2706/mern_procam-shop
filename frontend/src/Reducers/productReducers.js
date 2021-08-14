@@ -5,9 +5,12 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
-  FILTERED_PRODUCTS_REQUEST,
-  FILTERED_PRODUCTS_SUCCESS,
-  FILTERED_PRODUCTS_FAIL,
+  CATEGORY_LIST_REQUEST,
+  CATEGORY_LIST_SUCCESS,
+  CATEGORY_LIST_FAIL,
+  BRAND_LIST_REQUEST,
+  BRAND_LIST_SUCCESS,
+  BRAND_LIST_FAIL,
 } from "../Constants/productConstants";
 
 // A reducer takes in an initial state and an action
@@ -40,4 +43,31 @@ export const productDetailsReducer = (
   }
 };
 
+export const productsCategoriesReducer = (
+  state = { categoryProducts: [] },
+  action
+) => {
+  switch (action.type) {
+    case CATEGORY_LIST_REQUEST:
+      return { loading: true, categoryProducts: [] };
+    case CATEGORY_LIST_SUCCESS:
+      return { loading: false, categoryProducts: action.payload };
+    case CATEGORY_LIST_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
+export const productsBrandReducer = (state = { brandProducts: [] }, action) => {
+  switch (action.type) {
+    case BRAND_LIST_REQUEST:
+      return { loading: true, brandProducts: [] };
+    case BRAND_LIST_SUCCESS:
+      return { loading: false, brandProducts: action.payload };
+    case BRAND_LIST_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};

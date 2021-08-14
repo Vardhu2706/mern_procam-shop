@@ -4,14 +4,16 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import {
   productListReducer,
   productDetailsReducer,
-  filteredProductsReducer,
+  productsCategoriesReducer,
+  productsBrandReducer,
 } from "./Reducers/productReducers";
 import { cartReducer } from "./Reducers/cartReducers";
 
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
-
+  categoryList: productsCategoriesReducer,
+  brandList: productsBrandReducer,
   cart: cartReducer,
 });
 

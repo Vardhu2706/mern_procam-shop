@@ -20,23 +20,23 @@ const Header = () => {
             <Nav className="ms-auto">
               {/* Categories Dropdown */}
               <NavDropdown id="nav-dropdown-dark" title="Categories">
-                <LinkContainer to="/filter/cameras">
+                <LinkContainer to="/categories/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/lenses">
+                <LinkContainer to="/categories/lenses">
                   <NavDropdown.Item>Camera Lens</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/action">
+                <LinkContainer to="/categories/action">
                   <NavDropdown.Item>Action Cameras</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/audio">
+                <LinkContainer to="/categories/audio">
                   <NavDropdown.Item>
                     Pro Audio{" "}
                     <span className="badge rounded-pill bg-primary">New</span>
                   </NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Divider />
-                <LinkContainer to="/all-products">
+                <LinkContainer to="/categories/all">
                   <NavDropdown.Item>All Products</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>

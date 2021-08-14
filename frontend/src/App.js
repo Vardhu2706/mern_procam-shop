@@ -7,6 +7,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
+import CategoriesScreen from "./Screens/CategoriesScreen";
+import BrandsScreen from "./Screens/BrandsScreen";
 
 import CartScreen from "./Screens/CartScreen";
 
@@ -15,13 +17,15 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main className="py-3 ">
-        <Container>
-          <Route path="/" exact component={HomeScreen} />
-          <Route path="/product/:id" component={ProductScreen} />
-          <Route path="/cart/:id?" component={CartScreen} />
-        </Container>
-      </main>
+
+      <Container>
+        <Route path="/" exact component={HomeScreen} />
+        <Route path="/product/:id" component={ProductScreen} />
+        <Route path="/cart/:id?" component={CartScreen} />
+        <Route path="/categories/:category" component={CategoriesScreen} />
+        <Route path="/brands/:brand" component={BrandsScreen} />
+      </Container>
+
       <Footer />
     </Router>
   );

@@ -961,7 +961,7 @@ const products = [
     },
     subCategory: "Microphones & Kits",
     brand: "RollMaster",
-    category: "lenses",
+    category: "audio",
     price: 36299,
     countInStock: 10,
     rating: 4.5,
