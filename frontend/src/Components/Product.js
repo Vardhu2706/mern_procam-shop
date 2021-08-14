@@ -7,6 +7,7 @@ import Rating from "../Components/Rating";
 
 // Functional Component
 const Product = ({ product }) => {
+  const price = product.price;
   return (
     <Card className="my-3 p-3 rounded">
       {/* Product Image */}
@@ -27,7 +28,7 @@ const Product = ({ product }) => {
       </Card.Text>
 
       {/* Product Price */}
-      <Card.Text as="h3">₹{product.price.toLocaleString("en-IN")}</Card.Text>
+      <Card.Text as="h3">₹{price.toLocaleString("en-IN")}</Card.Text>
     </Card>
   );
 };
