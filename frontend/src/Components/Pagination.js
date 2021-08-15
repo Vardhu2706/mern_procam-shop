@@ -7,13 +7,17 @@ const Pagination = ({ productsPerPage, totalProducts, paginate }) => {
   for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
     pageNumbers.push(i);
   }
+
   return (
     <div>
       <ul className="pagination">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
             <Link
-              onClick={() => paginate(number)}
+              onClick={() => {
+                paginate(number);
+                window.scrollTo(0, 0);
+              }}
               to="#"
               className="page-link active"
             >
