@@ -9,7 +9,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 import CategoriesScreen from "./Screens/CategoriesScreen";
 import BrandsScreen from "./Screens/BrandsScreen";
-
+import LoginScreen from "./Screens/LoginScreen";
 import CartScreen from "./Screens/CartScreen";
 
 // Functional Component
@@ -19,11 +19,12 @@ const App = () => {
       <Header />
 
       <Container>
-        <Route path="/" exact component={HomeScreen} />
+        <Route path="/login" component={LoginScreen} />
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/categories/:category" component={CategoriesScreen} />
         <Route path="/brands/:brand" component={BrandsScreen} />
+        <Route path="/" exact component={HomeScreen} />
       </Container>
 
       <Footer />
