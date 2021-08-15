@@ -6,9 +6,9 @@ import {
   productDetailsReducer,
   productsCategoriesReducer,
   productsBrandReducer,
-} from "./Reducers/productReducers";
-import { cartReducer } from "./Reducers/cartReducers";
-import { userLoginReducer } from "./Reducers/UserReducers";
+} from "./Reducers/ProductReducers";
+import { cartReducer } from "./Reducers/CartReducers";
+import { userLoginReducer, userRegisterReducer } from "./Reducers/UserReducers";
 
 const reducer = combineReducers({
   productList: productListReducer,
@@ -16,6 +16,7 @@ const reducer = combineReducers({
   categoryList: productsCategoriesReducer,
   brandList: productsBrandReducer,
   userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
   cart: cartReducer,
 });
 

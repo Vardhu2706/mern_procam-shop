@@ -18,7 +18,7 @@ import {
   BRAND_LIST_REQUEST,
   BRAND_LIST_SUCCESS,
   BRAND_LIST_FAIL,
-} from "../Constants/productConstants";
+} from "../Constants/ProductConstants";
 
 // Product action to list feature products for homepage.
 export const listProducts = () => async (dispatch) => {

@@ -1,7 +1,7 @@
 // Importing Helpers
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { listProductsByCategory } from "../Actions/productActions";
+import { listProductsByCategory } from "../Actions/ProductActions";
 import { Link } from "react-router-dom";
 import Product from "../Components/Product";
 import { Row, Col } from "react-bootstrap";

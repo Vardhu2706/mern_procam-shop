@@ -17,7 +17,7 @@ import Rating from "../Components/Rating";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
 import { useDispatch, useSelector } from "react-redux";
-import { listProductDetails } from "../Actions/productActions";
+import { listProductDetails } from "../Actions/ProductActions";
 
 const FeaturesTable = ({ features }) => {
   return (

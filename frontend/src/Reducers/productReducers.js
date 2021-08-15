@@ -11,7 +11,7 @@ import {
   BRAND_LIST_REQUEST,
   BRAND_LIST_SUCCESS,
   BRAND_LIST_FAIL,
-} from "../Constants/productConstants";
+} from "../Constants/ProductConstants";
 
 // A reducer takes in an initial state and an action
 export const productListReducer = (state = { products: [] }, action) => {

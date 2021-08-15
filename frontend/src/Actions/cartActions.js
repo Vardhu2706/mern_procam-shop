@@ -1,7 +1,7 @@
 // Cart Actions
 // Imports
 import axios from "axios";
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../Constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../Constants/CartConstants";
 
 // Cart action to add product to cart
 export const addToCart = (id, qty) => async (dispatch, getState) => {

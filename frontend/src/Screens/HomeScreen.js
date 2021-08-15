@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 
 import { Row, Col } from "react-bootstrap";
-import { listProducts } from "../Actions/productActions";
+import { listProducts } from "../Actions/ProductActions";
 import { useDispatch, useSelector } from "react-redux";
 import Socials from "../Components/Socials";
 import Product from "../Components/Product";
