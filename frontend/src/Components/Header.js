@@ -1,13 +1,15 @@
+// Header Component
+// TO-DO : Add items indicator in CART button
+
 // Importing Helpers
 import React from "react";
 
+// Importing Components
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 // Functional Component
 const Header = () => {
-  // TO-DO : Add items indicator in CART button
-
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
@@ -18,7 +20,6 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              {/* Categories Dropdown */}
               <NavDropdown id="nav-dropdown-dark" title="Categories">
                 <LinkContainer to="/categories/cameras">
                   <NavDropdown.Item>Cameras</NavDropdown.Item>

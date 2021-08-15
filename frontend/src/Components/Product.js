@@ -8,6 +8,7 @@ import Rating from "../Components/Rating";
 // Functional Component
 const Product = ({ product }) => {
   const price = product.price;
+
   return (
     <Card className="my-3 p-3 rounded">
       {/* Product Image */}

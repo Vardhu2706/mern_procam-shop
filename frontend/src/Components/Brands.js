@@ -1,6 +1,9 @@
+// Brand Component
+
 // Importing Helpers
 import React from "react";
 
+// Importing Components
 import { LinkContainer } from "react-router-bootstrap";
 
 // Functional Component

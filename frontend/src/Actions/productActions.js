@@ -1,3 +1,10 @@
+// Product Actions
+
+// Imports
+// Importing Helpers
+import axios from "axios";
+
+// Importing Constants
 import {
   PRODUCT_LIST_FAIL,
   PRODUCT_LIST_SUCCESS,
@@ -12,9 +19,8 @@ import {
   BRAND_LIST_SUCCESS,
   BRAND_LIST_FAIL,
 } from "../Constants/productConstants";
-import axios from "axios";
 
-// Action - Products
+// Product action to list feature products for homepage.
 export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
@@ -35,6 +41,7 @@ export const listProducts = () => async (dispatch) => {
   }
 };
 
+// Product action to give info about the product selected
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
@@ -56,6 +63,7 @@ export const listProductDetails = (id) => async (dispatch) => {
   }
 };
 
+// Product action to list products of the specified category
 export const listProductsByCategory = (category) => async (dispatch) => {
   try {
     dispatch({ type: CATEGORY_LIST_REQUEST });
@@ -77,6 +85,7 @@ export const listProductsByCategory = (category) => async (dispatch) => {
   }
 };
 
+// Product action to list products of the specified brand
 export const listProductsByBrand = (brand) => async (dispatch) => {
   try {
     dispatch({ type: BRAND_LIST_REQUEST });

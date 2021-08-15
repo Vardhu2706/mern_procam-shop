@@ -11,7 +11,7 @@ import Loader from "../Components/Loader";
 import Message from "../Components/Message";
 
 // Functional Component
-const HomeScreen = () => {
+const HomeScreen = ({ history }) => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -19,6 +19,8 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+
+  
 
   return (
     <>
