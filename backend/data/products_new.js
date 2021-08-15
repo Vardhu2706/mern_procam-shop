@@ -1135,7 +1135,7 @@ const products = [
     countInStock: 10,
     rating: 4.1,
     numReviews: 10,
-    featured: true,
+    featured: false,
   },
   {
     name: "Sony MHC-V21D Bluetooth Wireless Music System",
