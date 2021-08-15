@@ -729,7 +729,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
-    featured: true,
+    featured: false,
   },
   {
     name: "Hoya 52mm UX UV Filter",
@@ -890,7 +890,7 @@ const products = [
     countInStock: 10,
     rating: 4,
     numReviews: 10,
-    featured: true,
+    featured: false,
   },
   {
     name: "Insta360 ONE R Boosted Battery Base",
