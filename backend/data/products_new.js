@@ -1167,12 +1167,13 @@ const products = [
   },
   {
     name: "Sennheiser HD 300 PRO Monitoring Headphones",
-    image: "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
+    image:
+      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
     showcase: [
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_02.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_03.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_04.jpg",
+      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
+      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_02.jpg",
+      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_03.jpg",
+      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_04.jpg",
     ],
     features: {
       Foldable: "Yes",

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductsByCategory } from "../Actions/productActions";
+import { Link } from "react-router-dom";
 import Product from "../Components/Product";
 import { Row, Col } from "react-bootstrap";
 import Loader from "../Components/Loader";
@@ -55,9 +56,9 @@ const CategoriesScreen = ({ location }) => {
 
   return (
     <>
-      {/* <Link className="btn btn-outline-dark my-3" to="/">
+      <Link className="btn btn-outline-dark mt-3" to="/">
         <i className="fas fa-angle-left"></i> Go Back
-      </Link> */}
+      </Link>
       <h2 className="mt-3">{specifyCategory(category)}</h2>
       {loading ? (
         <Loader />
