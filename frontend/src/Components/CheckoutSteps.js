@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { BsArrowRight } from "react-icons/bs";
 
 const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   return (
@@ -8,7 +9,11 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step1 ? (
           <LinkContainer to="/login">
-            <Nav.Link>Login</Nav.Link>
+            <>
+              <Nav.Link>
+                Login <BsArrowRight />
+              </Nav.Link>
+            </>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Login</Nav.Link>
@@ -17,7 +22,9 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step2 ? (
           <LinkContainer to="/shipping">
-            <Nav.Link>Shipping</Nav.Link>
+            <Nav.Link>
+              Shipping <BsArrowRight />
+            </Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Shipping</Nav.Link>
@@ -26,7 +33,9 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       <Nav.Item>
         {step3 ? (
           <LinkContainer to="/payment">
-            <Nav.Link>Payment</Nav.Link>
+            <Nav.Link>
+              Payment <BsArrowRight />
+            </Nav.Link>
           </LinkContainer>
         ) : (
           <Nav.Link disabled>Payment</Nav.Link>

@@ -33,9 +33,11 @@ const PaymentScreen = ({ history }) => {
 
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as="legend">Select Payment Method</Form.Label>
+          <Form.Label as="legend" className="mb-3">
+            Select Payment Method
+          </Form.Label>
 
-          <Col>
+          <Col className="m-3">
             {/* PayPal Payment */}
             <Form.Check
               type="radio"
