@@ -20,10 +20,9 @@ const HomeScreen = ({ history }) => {
     dispatch(listProducts());
   }, [dispatch]);
 
-  
-
   return (
     <>
+      <Row></Row>
       <h2 className="mt-3">Featured Products</h2>
       {loading ? (
         <Loader />
@@ -43,7 +42,7 @@ const HomeScreen = ({ history }) => {
       <Row>
         <Socials />
       </Row>
-      {/* Shop By Brand */}
+      <h2 className="mt-3">Shop Top Brands</h2>
       <Row>
         <Brands />
       </Row>

@@ -10,7 +10,7 @@ import { LinkContainer } from "react-router-bootstrap";
 const Brands = () => {
   return (
     <div className="my-3">
-      <h1>Shop Top Brands</h1>
+      
       <div className="d-flex flex-column flex-lg-row justify-content-center">
         <div className="p-2">
           <LinkContainer to="/products/canon">
