@@ -13,6 +13,7 @@ import LoginScreen from "./Screens/LoginScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import CartScreen from "./Screens/CartScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
+import ShippingScreen from "./Screens/ShippingScreen";
 
 // Functional Component
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <main className="py-3">
         <Container>
           <Route path="/login" component={LoginScreen} />
+          <Route path="/shipping" component={ShippingScreen} />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/signup" component={RegisterScreen} />
           <Route path="/product/:id" component={ProductScreen} />
