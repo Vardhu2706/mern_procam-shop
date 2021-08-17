@@ -5,8 +5,13 @@ import {
   ORDER_DETAILS_REQUEST,
   ORDER_DETAILS_SUCCESS,
   ORDER_DETAILS_FAIL,
+  ORDER_PAY_REQUEST,
+  ORDER_PAY_SUCCESS,
+  ORDER_PAY_FAIL,
+  ORDER_PAY_RESET,
 } from "../Constants/OrderConstants";
 
+// Reducer to create an order
 export const orderCreateReducer = (state = {}, action) => {
   switch (action.type) {
     case ORDER_CREATE_REQUEST:
@@ -20,6 +25,7 @@ export const orderCreateReducer = (state = {}, action) => {
   }
 };
 
+// Reducer to get order details
 export const orderDetailsReducer = (
   state = { loading: true, orderItems: [], shippingAddress: {} },
   action
@@ -40,6 +46,30 @@ export const orderDetailsReducer = (
         loading: false,
         error: action.payload,
       };
+    default:
+      return state;
+  }
+};
+
+// Reducer to pay the order
+export const orderPayReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ORDER_PAY_REQUEST:
+      return {
+        loading: true,
+      };
+    case ORDER_PAY_SUCCESS:
+      return {
+        loading: false,
+        success: true,
+      };
+    case ORDER_PAY_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    case ORDER_PAY_RESET:
+      return {};
     default:
       return state;
   }
