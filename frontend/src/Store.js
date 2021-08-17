@@ -22,7 +22,10 @@ import {
 } from "./Reducers/UserReducers";
 
 // Importing Order Reducers
-import { orderCreateReducer } from "./Reducers/OrderReducers";
+import {
+  orderCreateReducer,
+  orderDetailsReducer,
+} from "./Reducers/OrderReducers";
 
 const reducer = combineReducers({
   productList: productListReducer,
@@ -35,6 +38,7 @@ const reducer = combineReducers({
   userUpdateProfile: userUpdateProfileReducer,
   cart: cartReducer,
   orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
 });
 
 // Getting cart info from storage

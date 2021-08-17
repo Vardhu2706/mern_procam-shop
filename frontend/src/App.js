@@ -16,6 +16,7 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import ShippingScreen from "./Screens/ShippingScreen";
 import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
+import OrderScreen from "./Screens/OrderScreen";
 
 // Functional Component
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/shipping" component={ShippingScreen} />
           <Route path="/payment" component={PaymentScreen} />
           <Route path="/placeorder" component={PlaceOrderScreen} />
+          <Route path="/order/:id" component={OrderScreen} />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/signup" component={RegisterScreen} />
           <Route path="/product/:id" component={ProductScreen} />
