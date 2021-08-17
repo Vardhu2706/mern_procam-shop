@@ -2,8 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import colors from "colors";
-import productRoutes from "./Routes/productRoutes.js";
-import userRoutes from "./Routes/userRoutes.js";
+import productRoutes from "./Routes/ProductRoutes.js";
+import userRoutes from "./Routes/UserRoutes.js";
+import OrderRoutes from "./Routes/OrderRoutes.js";
 import { notFound, errorHandler } from "./Middleware/ErrorMiddleware.js";
 dotenv.config();
 connectDB();
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/orders", OrderRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

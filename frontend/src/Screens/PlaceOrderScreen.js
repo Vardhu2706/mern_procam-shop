@@ -1,16 +1,17 @@
 // PlaceOrder Screen
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import CheckoutSteps from "../Components/CheckoutSteps";
 import { Link } from "react-router-dom";
+import { createOrder } from "../Actions/OrderActions";
 
-const PlaceOrderScreen = () => {
+const PlaceOrderScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   //   Calculate Prices
-
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(0);
   };
@@ -29,8 +30,28 @@ const PlaceOrderScreen = () => {
     Number(cart.shippingPrice) +
     Number(cart.taxPrice);
 
+  const orderCreate = useSelector((state) => state.orderCreate);
+  const { order, success, error } = orderCreate;
+
+  useEffect(() => {
+    if (success) {
+      history.push(`/order/${order._id}`);
+    }
+    // eslint-disable-next-line
+  }, [history, success]);
+
   const placeOrder = () => {
-    console.log("Order placed");
+    dispatch(
+      createOrder({
+        orderItems: cart.cartItems,
+        shippingAddress: cart.shippingAddress,
+        paymentMethod: cart.paymentMethod,
+        itemsPrice: cart.itemsPrice,
+        shippingPrice: cart.shippingPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: cart.totalPrice,
+      })
+    );
   };
 
   return (
@@ -71,7 +92,7 @@ const PlaceOrderScreen = () => {
                   {cart.cartItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
-                        <Col md={1}>
+                        <Col md={2}>
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -104,30 +125,31 @@ const PlaceOrderScreen = () => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col>Items:</Col>
                   <Col>₹{cart.itemsPrice.toLocaleString("en-IN")}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
+                  <Col>Shipping:</Col>
                   <Col>₹{cart.shippingPrice.toLocaleString("en-IN")}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Tax</Col>
+                  <Col>Tax:</Col>
                   <Col>₹{cart.taxPrice.toLocaleString("en-IN")}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Total</Col>
+                  <Col>Total:</Col>
                   <Col>₹{cart.totalPrice.toLocaleString("en-IN")}</Col>
                 </Row>
               </ListGroup.Item>
 
               <ListGroup.Item>
+                {error && <Message variant="danger">{error}</Message>}
                 <Button
                   type="button"
                   className="btn-block w-100"

@@ -21,6 +21,9 @@ import {
   userUpdateProfileReducer,
 } from "./Reducers/UserReducers";
 
+// Importing Order Reducers
+import { orderCreateReducer } from "./Reducers/OrderReducers";
+
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
@@ -31,6 +34,7 @@ const reducer = combineReducers({
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
   cart: cartReducer,
+  orderCreate: orderCreateReducer,
 });
 
 // Getting cart info from storage
