@@ -1,6 +1,6 @@
 // PlaceOrder Screen
 import React, { useEffect, useState } from "react";
-import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
+import { Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import axios from "axios";
@@ -13,7 +13,6 @@ import { ORDER_PAY_RESET } from "../Constants/OrderConstants";
 const OrderScreen = ({ match }) => {
   const dispatch = useDispatch();
   const orderId = match.params.id;
-  const currency = "INR";
   const [sdkReady, setSDKReady] = useState(false);
 
   const orderDetails = useSelector((state) => state.orderDetails);
