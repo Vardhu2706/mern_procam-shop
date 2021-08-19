@@ -14,8 +14,12 @@ import {
   USER_UPDATE_PROFILE_SUCCESS,
   USER_UPDATE_PROFILE_FAIL,
   USER_UPDATE_PROFILE_RESET,
+  USER_LIST_REQUEST,
+  USER_LIST_SUCCESS,
+  USER_LIST_FAIL,
 } from "../Constants/UserConstants";
 
+// Reducer to let user login
 export const userLoginReducer = (state = {}, action) => {
   switch (action.type) {
     case USER_LOGIN_REQUEST:
@@ -31,6 +35,7 @@ export const userLoginReducer = (state = {}, action) => {
   }
 };
 
+// Reducer to let user register
 export const userRegisterReducer = (state = {}, action) => {
   switch (action.type) {
     case USER_REGISTER_REQUEST:
@@ -44,6 +49,7 @@ export const userRegisterReducer = (state = {}, action) => {
   }
 };
 
+// Reducer to get user details
 export const userDetailsReducer = (state = { user: {} }, action) => {
   switch (action.type) {
     case USER_DETAILS_REQUEST:
@@ -59,6 +65,7 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
   }
 };
 
+// Reducer to let user update info
 export const userUpdateProfileReducer = (state = {}, action) => {
   switch (action.type) {
     case USER_UPDATE_PROFILE_REQUEST:
@@ -69,6 +76,20 @@ export const userUpdateProfileReducer = (state = {}, action) => {
       return { loading: false, error: action.payload };
     case USER_UPDATE_PROFILE_RESET:
       return {};
+    default:
+      return state;
+  }
+};
+
+// Reducer to get users
+export const userListReducer = (state = { users: [] }, action) => {
+  switch (action.type) {
+    case USER_LIST_REQUEST:
+      return { loading: true };
+    case USER_LIST_SUCCESS:
+      return { loading: false, users: action.payload };
+    case USER_LIST_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }

@@ -29,7 +29,7 @@ const Product = ({ product }) => {
       </Card.Text>
 
       {/* Product Price */}
-      <Card.Text as="h3">₹{price.toLocaleString("en-IN")}</Card.Text>
+      <Card.Text as="h3">${price.toLocaleString("en-US")}</Card.Text>
     </Card>
   );
 };

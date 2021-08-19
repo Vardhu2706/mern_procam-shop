@@ -124,7 +124,7 @@ const ProductScreen = ({ history, match }) => {
                       {product.price ? (
                         <Col>
                           <strong>
-                            ₹{product.price.toLocaleString("en-IN")}
+                            ${product.price.toLocaleString("en-IN")}
                           </strong>
                         </Col>
                       ) : (

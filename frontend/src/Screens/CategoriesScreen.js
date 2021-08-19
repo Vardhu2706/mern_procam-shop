@@ -62,6 +62,7 @@ const CategoriesScreen = ({ location }) => {
       <h2 className="mt-3">{specifyCategory(category)}</h2>
       {loading ? (
         <Loader />
+        
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (

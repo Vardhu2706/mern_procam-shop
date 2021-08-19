@@ -140,8 +140,8 @@ const OrderScreen = ({ match }) => {
                             </Link>
                           </Col>
                           <Col md={4}>
-                            {item.qty} x ₹{item.price.toLocaleString("en-IN")} =
-                            ₹{(item.qty * item.price).toLocaleString("en-IN")}
+                            {item.qty} x ${item.price.toLocaleString("en-IN")} =
+                            ${(item.qty * item.price).toLocaleString("en-IN")}
                           </Col>
                         </Row>
                       </ListGroup.Item>
@@ -160,25 +160,25 @@ const OrderScreen = ({ match }) => {
                 <ListGroup.Item>
                   <Row>
                     <Col>Items:</Col>
-                    <Col>₹{order.itemsPrice.toLocaleString("en-IN")}</Col>
+                    <Col>${order.itemsPrice.toLocaleString("en-IN")}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Shipping:</Col>
-                    <Col>₹{order.shippingPrice.toLocaleString("en-IN")}</Col>
+                    <Col>${order.shippingPrice.toLocaleString("en-IN")}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Tax:</Col>
-                    <Col>₹{order.taxPrice.toLocaleString("en-IN")}</Col>
+                    <Col>${order.taxPrice.toLocaleString("en-IN")}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Total:</Col>
-                    <Col>₹{order.totalPrice.toLocaleString("en-IN")}</Col>
+                    <Col>${order.totalPrice.toLocaleString("en-IN")}</Col>
                   </Row>
                 </ListGroup.Item>
                 {!order.isPaid && (
