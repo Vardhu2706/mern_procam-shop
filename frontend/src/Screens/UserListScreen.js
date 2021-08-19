@@ -4,7 +4,7 @@ import { Button, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import { listUsers } from "../Actions/UserActions";
+import { listUsers, deleteUser } from "../Actions/UserActions";
 import { FaCheck, FaTimes, FaUserEdit, FaTrash } from "react-icons/fa";
 
 const UserListScreen = ({ history }) => {
@@ -15,17 +15,22 @@ const UserListScreen = ({ history }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const userDelete = useSelector((state) => state.userDelete);
+  const { success: successDelete } = userDelete;
+
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {
       history.push("/login");
     }
-  }, [dispatch, history]);
+  }, [dispatch, history, successDelete]);
 
   // Delete User Handler
   const deleteHandler = (userId) => {
-    //
+    if (window.confirm("Delete user?")) {
+      dispatch(deleteUser(userId));
+    }
   };
 
   return (
@@ -43,7 +48,7 @@ const UserListScreen = ({ history }) => {
               <th>NAME</th>
               <th>EMAIL</th>
               <th>Admin</th>
-              <th> </th>
+              <th>Options</th>
             </tr>
           </thead>
           <tbody>
@@ -62,20 +67,25 @@ const UserListScreen = ({ history }) => {
                       <FaTimes style={{ color: "red" }} />
                     )}
                   </td>
-                  <td>
-                    <LinkContainer to={`/user/${user._id}/edit`}>
-                      <Button variant="primary" className="btn-sm">
-                        <FaUserEdit style={{ fontSize: "1.2rem" }} />
+
+                  {user.isAdmin ? (
+                    <td>Not Authorized</td>
+                  ) : (
+                    <td>
+                      <LinkContainer to={`/user/${user._id}/edit`}>
+                        <Button variant="primary" className="btn-sm">
+                          <FaUserEdit style={{ fontSize: "1.2rem" }} />
+                        </Button>
+                      </LinkContainer>
+                      <Button
+                        variant="danger"
+                        className="btn-sm"
+                        onClick={() => deleteHandler(user._id)}
+                      >
+                        <FaTrash style={{ fontSize: "1.2rem" }} />
                       </Button>
-                    </LinkContainer>
-                    <Button
-                      variant="danger"
-                      className="btn-sm"
-                      onClick={() => deleteHandler(user._id)}
-                    >
-                      <FaTrash style={{ fontSize: "1.2rem" }} />
-                    </Button>
-                  </td>
+                    </td>
+                  )}
                 </tr>
               );
             })}
