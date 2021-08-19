@@ -24,7 +24,7 @@ const UserListScreen = ({ history }) => {
     } else {
       history.push("/login");
     }
-  }, [dispatch, history, successDelete]);
+  }, [dispatch, history, successDelete, userInfo]);
 
   // Delete User Handler
   const deleteHandler = (userId) => {
@@ -68,15 +68,16 @@ const UserListScreen = ({ history }) => {
                     )}
                   </td>
 
-                  {user.isAdmin ? (
-                    <td>Not Authorized</td>
-                  ) : (
-                    <td>
-                      <LinkContainer to={`/user/${user._id}/edit`}>
-                        <Button variant="primary" className="btn-sm">
-                          <FaUserEdit style={{ fontSize: "1.2rem" }} />
-                        </Button>
-                      </LinkContainer>
+                  <td>
+                    <LinkContainer to={`/admin/user/${user._id}/edit`}>
+                      <Button variant="primary" className="btn-sm">
+                        <FaUserEdit style={{ fontSize: "1.2rem" }} />
+                      </Button>
+                    </LinkContainer>
+
+                    {user.isAdmin ? (
+                      <></>
+                    ) : (
                       <Button
                         variant="danger"
                         className="btn-sm"
@@ -84,8 +85,8 @@ const UserListScreen = ({ history }) => {
                       >
                         <FaTrash style={{ fontSize: "1.2rem" }} />
                       </Button>
-                    </td>
-                  )}
+                    )}
+                  </td>
                 </tr>
               );
             })}

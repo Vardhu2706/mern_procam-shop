@@ -18,6 +18,7 @@ import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
 import UserListScreen from "./Screens/UserListScreen";
+import UserEditScreen from "./Screens/UserEditScreen";
 
 // Functional Component
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/categories/:category" component={CategoriesScreen} />
           <Route path="/brands/:brand" component={BrandsScreen} />
           <Route path="/admin/userlist" component={UserListScreen} />
+          <Route path="/admin/user/:id/edit" component={UserEditScreen} />
           <Route path="/" exact component={HomeScreen} />
         </Container>
       </main>
