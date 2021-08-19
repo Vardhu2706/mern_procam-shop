@@ -7,14 +7,21 @@ import Loader from "../Components/Loader";
 import { listUsers } from "../Actions/UserActions";
 import { FaCheck, FaTimes, FaUserEdit, FaTrash } from "react-icons/fa";
 
-const UserListScreen = () => {
+const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();
   const userList = useSelector((state) => state.userList);
   const { loading, error, users } = userList;
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
   useEffect(() => {
-    dispatch(listUsers());
-  }, [dispatch]);
+    if (userInfo && userInfo.isAdmin) {
+      dispatch(listUsers());
+    } else {
+      history.push("/login");
+    }
+  }, [dispatch, history]);
 
   // Delete User Handler
   const deleteHandler = (userId) => {

@@ -18,6 +18,7 @@ import {
   USER_LIST_REQUEST,
   USER_LIST_SUCCESS,
   USER_LIST_FAIL,
+  USER_LIST_RESET,
 } from "../Constants/UserConstants";
 
 import { ORDER_LIST_MY_RESET } from "../Constants/OrderConstants";
@@ -72,6 +73,10 @@ export const logout = () => (dispatch) => {
   // Clearing user state
   dispatch({
     type: USER_DETAILS_RESET,
+  });
+
+  dispatch({
+    type: USER_LIST_RESET,
   });
 };
 
