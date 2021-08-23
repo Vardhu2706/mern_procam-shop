@@ -6,6 +6,7 @@ import {
   CART_REMOVE_ITEM,
   CART_SAVE_SHIPPING_ADDRESS,
   CART_SAVE_PAYMENT_METHOD,
+  CART_RESET,
 } from "../Constants/CartConstants";
 
 // Cart action to add product to cart
@@ -54,6 +55,8 @@ export const savePaymentMethod = (data) => async (dispatch) => {
     type: CART_SAVE_PAYMENT_METHOD,
     payload: data,
   });
+
+ 
 
   localStorage.setItem("paymentMethod", JSON.stringify(data));
 };
