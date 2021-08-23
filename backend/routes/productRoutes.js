@@ -6,7 +6,9 @@ import {
   getProductByID,
   getProductsByCategory,
   getProductsByBrand,
+  deleteProduct,
 } from "../Controllers/productController.js";
+import { protect, admin } from "../Middleware/AuthMiddleware.js";
 
 // @desc    Fetch all products
 // @route   GET /api/products
@@ -16,7 +18,7 @@ router.route("/").get(getFeaturedProducts);
 // @desc    Fetch single product
 // @route   GET /api/products/:id
 // @access  Public
-router.route("/:id").get(getProductByID);
+router.route("/:id").get(getProductByID).delete(protect, admin, deleteProduct);
 
 // @desc    Fetch products by category
 // @route   GET /api/products/categories/:category

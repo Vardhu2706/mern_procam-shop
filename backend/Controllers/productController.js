@@ -24,6 +24,18 @@ const getProductByID = asyncHandler(async (req, res) => {
   }
 });
 
+// Delete Product by ID
+const deleteProduct = asyncHandler(async (req, res) => {
+  const product = await Product.findById(req.params.id);
+
+  if (product) {
+    await product.remove();
+    res.json({ message: "Product Removed" });
+  } else {
+    throw new Error("Can't find product");
+  }
+});
+
 // Get Products by category
 const getProductsByCategory = asyncHandler(async (req, res) => {
   if (req.params.category === "all") {
@@ -39,9 +51,11 @@ const getProductsByBrand = asyncHandler(async (req, res) => {
   const products = await Product.find({ brand: req.params.brand });
   res.json(products);
 });
+
 export {
   getFeaturedProducts,
   getProductByID,
   getProductsByCategory,
   getProductsByBrand,
+  deleteProduct
 };

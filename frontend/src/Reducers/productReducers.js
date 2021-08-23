@@ -11,6 +11,9 @@ import {
   BRAND_LIST_REQUEST,
   BRAND_LIST_SUCCESS,
   BRAND_LIST_FAIL,
+  PRODUCT_DELETE_REQUEST,
+  PRODUCT_DELETE_SUCCESS,
+  PRODUCT_DELETE_FAIL,
 } from "../Constants/ProductConstants";
 
 // A reducer takes in an initial state and an action
@@ -66,6 +69,19 @@ export const productsBrandReducer = (state = { brandProducts: [] }, action) => {
     case BRAND_LIST_SUCCESS:
       return { loading: false, brandProducts: action.payload };
     case BRAND_LIST_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const productDeleteReducer = (state = {}, action) => {
+  switch (action.type) {
+    case PRODUCT_DELETE_REQUEST:
+      return { loading: true };
+    case PRODUCT_DELETE_SUCCESS:
+      return { loading: false, success: true };
+    case PRODUCT_DELETE_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

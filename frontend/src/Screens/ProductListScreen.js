@@ -4,14 +4,24 @@ import { Button, Table, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import { listProductsByCategory } from "../Actions/ProductActions";
-import { FaCheck, FaTimes, FaUserEdit, FaTrash } from "react-icons/fa";
+import {
+  listProductsByCategory,
+  deleteProduct,
+} from "../Actions/ProductActions";
+import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 
 const ProductListScreen = ({ history, match }) => {
   const dispatch = useDispatch();
 
-  const productList = useSelector((state) => state.productList);
-  const { loading, error, products } = productList;
+  const categoryList = useSelector((state) => state.categoryList);
+  const { loading, error, categoryProducts: products } = categoryList;
+
+  const productDelete = useSelector((state) => state.productDelete);
+  const {
+    loading: loadingDelete,
+    error: errorDelete,
+    success: successDelete,
+  } = productDelete;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -22,12 +32,12 @@ const ProductListScreen = ({ history, match }) => {
     } else {
       history.push("/login");
     }
-  }, [dispatch, history, userInfo]);
+  }, [dispatch, history, userInfo, successDelete]);
 
   // Delete User Handler
-  const deleteHandler = (userId) => {
-    if (window.confirm("Delete user?")) {
-      // Delete Product
+  const deleteHandler = (id) => {
+    if (window.confirm("Delete product?")) {
+      dispatch(deleteProduct(id));
     }
   };
 
@@ -43,10 +53,18 @@ const ProductListScreen = ({ history, match }) => {
         </Col>
         <Col className="text-end">
           <Button className="my-3" onClick={createProductHandler}>
-            <i className="fas fa-plus"> </i> Create Product
+            <FaPlus style={{ fontSize: "1.2rem" }} /> Create Product
           </Button>
         </Col>
       </Row>
+      {loadingDelete ? (
+        <Loader />
+      ) : errorDelete ? (
+        <Message variant="danger">{error}</Message>
+      ) : (
+        <></>
+      )}
+
       {loading ? (
         <Loader />
       ) : error ? (
@@ -75,7 +93,7 @@ const ProductListScreen = ({ history, match }) => {
                   <td>
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
                       <Button variant="primary" className="btn-sm">
-                        <FaUserEdit style={{ fontSize: "1.2rem" }} />
+                        <FaEdit style={{ fontSize: "1.2rem" }} />
                       </Button>
                     </LinkContainer>
 

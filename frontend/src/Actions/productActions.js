@@ -18,6 +18,9 @@ import {
   BRAND_LIST_REQUEST,
   BRAND_LIST_SUCCESS,
   BRAND_LIST_FAIL,
+  PRODUCT_DELETE_REQUEST,
+  PRODUCT_DELETE_SUCCESS,
+  PRODUCT_DELETE_FAIL,
 } from "../Constants/ProductConstants";
 
 // Product action to list feature products for homepage.
@@ -103,6 +106,42 @@ export const listProductsByBrand = (brand) => async (dispatch) => {
         error.response && error.response.data.message
           ? error.message.data.message
           : error.message,
+    });
+  }
+};
+
+export const deleteProduct = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: PRODUCT_DELETE_REQUEST,
+    });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    await axios.delete(`/api/products/${id}`, config);
+
+    dispatch({
+      type: PRODUCT_DELETE_SUCCESS,
+    });
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    // if (message === "Not authorized, token failed") {
+    //   dispatch(logout());
+    // }
+    dispatch({
+      type: PRODUCT_DELETE_FAIL,
+      payload: message,
     });
   }
 };
