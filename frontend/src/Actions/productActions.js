@@ -23,11 +23,11 @@ import {
   PRODUCT_DELETE_FAIL,
 } from "../Constants/ProductConstants";
 
-// Product action to list feature products for homepage.
 export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    const { data } = await axios.get("api/products");
+
+    const { data } = await axios.get(`/api/products`);
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,

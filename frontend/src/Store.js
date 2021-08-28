@@ -31,6 +31,7 @@ import {
   orderDetailsReducer,
   orderPayReducer,
   orderListMyReducer,
+  allOrdersReducer,
 } from "./Reducers/OrderReducers";
 
 const reducer = combineReducers({
@@ -51,6 +52,7 @@ const reducer = combineReducers({
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
   orderListMy: orderListMyReducer,
+  allOrders: allOrdersReducer,
 });
 
 // Getting cart info from storage

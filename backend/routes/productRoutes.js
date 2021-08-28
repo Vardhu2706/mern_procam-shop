@@ -2,7 +2,7 @@ import express from "express";
 import asyncHandler from "express-async-handler";
 const router = express.Router();
 import {
-  getFeaturedProducts,
+  getAllProducts,
   getProductByID,
   getProductsByCategory,
   getProductsByBrand,
@@ -13,7 +13,7 @@ import { protect, admin } from "../Middleware/AuthMiddleware.js";
 // @desc    Fetch all products
 // @route   GET /api/products
 // @access  Public
-router.route("/").get(getFeaturedProducts);
+router.route("/").get(getAllProducts);
 
 // @desc    Fetch single product
 // @route   GET /api/products/:id

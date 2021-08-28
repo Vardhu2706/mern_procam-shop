@@ -4,18 +4,19 @@ import { Button, Table, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import {
-  listProductsByCategory,
-  deleteProduct,
-} from "../Actions/ProductActions";
+import { listProducts, deleteProduct } from "../Actions/ProductActions";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 
+// Functional Component
 const ProductListScreen = ({ history, match }) => {
+  // Initializing Dispatch
   const dispatch = useDispatch();
 
-  const categoryList = useSelector((state) => state.categoryList);
-  const { loading, error, categoryProducts: products } = categoryList;
+  // Get products stored in state
+  const productList = useSelector((state) => state.productList);
+  const { loading, error, products } = productList;
 
+  // Get product delete response from state
   const productDelete = useSelector((state) => state.productDelete);
   const {
     loading: loadingDelete,
@@ -23,24 +24,31 @@ const ProductListScreen = ({ history, match }) => {
     success: successDelete,
   } = productDelete;
 
+  // Get logged-in user info from state
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  // Use Effect
   useEffect(() => {
+    // Check if logged in user is Admin
     if (userInfo && userInfo.isAdmin) {
-      dispatch(listProductsByCategory("/all"));
+      // If Admin, fetch products list
+      dispatch(listProducts("/all"));
     } else {
+      // If not admin, redirect to login screen
       history.push("/login");
     }
   }, [dispatch, history, userInfo, successDelete]);
 
-  // Delete User Handler
+  // Delete Product Handler
   const deleteHandler = (id) => {
+    // Dispatch delete action on confirmation
     if (window.confirm("Delete product?")) {
       dispatch(deleteProduct(id));
     }
   };
 
+  // Create Product Handler
   const createProductHandler = (product) => {
     // Create a product
   };
@@ -50,11 +58,6 @@ const ProductListScreen = ({ history, match }) => {
       <Row className="align-items-center">
         <Col>
           <h1>Products</h1>
-        </Col>
-        <Col className="text-end">
-          <Button className="my-3" onClick={createProductHandler}>
-            <FaPlus style={{ fontSize: "1.2rem" }} /> Create Product
-          </Button>
         </Col>
       </Row>
       {loadingDelete ? (
@@ -78,6 +81,7 @@ const ProductListScreen = ({ history, match }) => {
               <th>Price</th>
               <th>Category</th>
               <th>Brand</th>
+              <th>Options</th>
             </tr>
           </thead>
           <tbody>
@@ -87,7 +91,7 @@ const ProductListScreen = ({ history, match }) => {
                   <td>{product._id}</td>
                   <td>{product.name}</td>
                   <td>${product.price.toLocaleString("en-US")}</td>
-                  <td>{product.category}</td>
+                  <td>{product.category.toUpperCase()}</td>
                   <td>{product.brand}</td>
 
                   <td>
@@ -96,7 +100,6 @@ const ProductListScreen = ({ history, match }) => {
                         <FaEdit style={{ fontSize: "1.2rem" }} />
                       </Button>
                     </LinkContainer>
-
                     {product.isAdmin ? (
                       <></>
                     ) : (

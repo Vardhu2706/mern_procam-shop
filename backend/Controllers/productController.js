@@ -7,11 +7,6 @@ const getAllProducts = asyncHandler(async (req, res) => {
   res.json(products);
 });
 
-// Get Featured Products
-const getFeaturedProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({ featured: true });
-  res.json(products);
-});
 
 // Get Product by ID
 const getProductByID = asyncHandler(async (req, res) => {
@@ -52,10 +47,11 @@ const getProductsByBrand = asyncHandler(async (req, res) => {
   res.json(products);
 });
 
+
 export {
-  getFeaturedProducts,
   getProductByID,
   getProductsByCategory,
   getProductsByBrand,
-  deleteProduct
+  deleteProduct,
+  getAllProducts
 };
