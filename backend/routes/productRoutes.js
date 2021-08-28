@@ -7,18 +7,24 @@ import {
   getProductsByCategory,
   getProductsByBrand,
   deleteProduct,
+  updateProduct,
+  createProduct
 } from "../Controllers/productController.js";
 import { protect, admin } from "../Middleware/AuthMiddleware.js";
 
 // @desc    Fetch all products
 // @route   GET /api/products
 // @access  Public
-router.route("/").get(getAllProducts);
+router.route("/").get(getAllProducts).post(protect, admin, createProduct);
 
 // @desc    Fetch single product
 // @route   GET /api/products/:id
 // @access  Public
-router.route("/:id").get(getProductByID).delete(protect, admin, deleteProduct);
+router
+  .route("/:id")
+  .get(getProductByID)
+  .delete(protect, admin, deleteProduct)
+  .put(protect, admin, updateProduct);
 
 // @desc    Fetch products by category
 // @route   GET /api/products/categories/:category

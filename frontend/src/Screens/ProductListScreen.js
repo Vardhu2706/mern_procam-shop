@@ -93,23 +93,27 @@ const ProductListScreen = ({ history, match }) => {
                   <td>${product.price.toLocaleString("en-US")}</td>
                   <td>{product.category.toUpperCase()}</td>
                   <td>{product.brand}</td>
-
                   <td>
-                    <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                      <Button variant="primary" className="btn-sm">
-                        <FaEdit style={{ fontSize: "1.2rem" }} />
-                      </Button>
-                    </LinkContainer>
                     {product.isAdmin ? (
                       <></>
                     ) : (
-                      <Button
-                        variant="danger"
-                        className="btn-sm"
-                        onClick={() => deleteHandler(product._id)}
-                      >
-                        <FaTrash style={{ fontSize: "1.2rem" }} />
-                      </Button>
+                      <>
+                        <LinkContainer
+                          to={`/admin/product/${product._id}/edit`}
+                        >
+                          <Button variant="primary" className="btn-sm">
+                            <FaEdit style={{ fontSize: "1.2rem" }} />
+                          </Button>
+                        </LinkContainer>
+
+                        <Button
+                          variant="danger"
+                          className="btn-sm"
+                          onClick={() => deleteHandler(product._id)}
+                        >
+                          <FaTrash style={{ fontSize: "1.2rem" }} />
+                        </Button>
+                      </>
                     )}
                   </td>
                 </tr>
