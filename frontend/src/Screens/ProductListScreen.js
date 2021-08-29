@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
-import { LinkContainer } from "react-router-bootstrap";
 import { Button, Table, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import {
-  listProducts,
-  deleteProduct,
-  createProduct,
-} from "../Actions/ProductActions";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import { listProducts, deleteProduct } from "../Actions/ProductActions";
+import { FaTrash } from "react-icons/fa";
 import { PRODUCT_CREATE_RESET } from "../Constants/ProductConstants";
 
 // Functional Component
