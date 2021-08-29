@@ -13,9 +13,9 @@ import {
   ORDER_LIST_MY_SUCCESS,
   ORDER_LIST_MY_FAIL,
   ORDER_LIST_MY_RESET,
-  ORDER_LIST_ALL_REQUEST,
-  ORDER_LIST_ALL_SUCCESS,
-  ORDER_LIST_ALL_FAIL,
+  ORDER_LIST_REQUEST,
+  ORDER_LIST_SUCCESS,
+  ORDER_LIST_FAIL,
 } from "../Constants/OrderConstants";
 
 // Reducer to create an order
@@ -106,23 +106,22 @@ export const orderListMyReducer = (state = { orders: [] }, action) => {
   }
 };
 
-export const allOrdersReducer = (state = { allOrders: [] }, action) => {
+export const orderListReducer = (state = { orders: [] }, action) => {
   switch (action.type) {
-    case ORDER_LIST_ALL_REQUEST:
+    case ORDER_LIST_REQUEST:
       return {
         loading: true,
       };
-    case ORDER_LIST_ALL_SUCCESS:
+    case ORDER_LIST_SUCCESS:
       return {
         loading: false,
         orders: action.payload,
       };
-    case ORDER_LIST_ALL_FAIL:
+    case ORDER_LIST_FAIL:
       return {
         loading: false,
         error: action.payload,
       };
-
     default:
       return state;
   }

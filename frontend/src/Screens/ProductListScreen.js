@@ -4,8 +4,13 @@ import { Button, Table, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import { listProducts, deleteProduct } from "../Actions/ProductActions";
-import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
+import {
+  listProducts,
+  deleteProduct,
+  createProduct,
+} from "../Actions/ProductActions";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { PRODUCT_CREATE_RESET } from "../Constants/ProductConstants";
 
 // Functional Component
 const ProductListScreen = ({ history, match }) => {
@@ -28,17 +33,38 @@ const ProductListScreen = ({ history, match }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  // Get product create response from state
+  const productCreate = useSelector((state) => state.productCreate);
+  const {
+    loading: loadingCreate,
+    error: errorCreate,
+    success: successCreate,
+    product: createdProduct,
+  } = productCreate;
+
   // Use Effect
   useEffect(() => {
+    // Resetting
+    dispatch({ type: PRODUCT_CREATE_RESET });
     // Check if logged in user is Admin
-    if (userInfo && userInfo.isAdmin) {
+    if (!userInfo.isAdmin) {
       // If Admin, fetch products list
-      dispatch(listProducts("/all"));
-    } else {
-      // If not admin, redirect to login screen
       history.push("/login");
     }
-  }, [dispatch, history, userInfo, successDelete]);
+
+    if (successCreate) {
+      history.push(`/admin/product/${createdProduct._id}/edit`);
+    } else {
+      dispatch(listProducts("/all"));
+    }
+  }, [
+    dispatch,
+    history,
+    userInfo,
+    successDelete,
+    successCreate,
+    createdProduct,
+  ]);
 
   // Delete Product Handler
   const deleteHandler = (id) => {
@@ -46,11 +72,6 @@ const ProductListScreen = ({ history, match }) => {
     if (window.confirm("Delete product?")) {
       dispatch(deleteProduct(id));
     }
-  };
-
-  // Create Product Handler
-  const createProductHandler = (product) => {
-    // Create a product
   };
 
   return (
@@ -64,6 +85,13 @@ const ProductListScreen = ({ history, match }) => {
         <Loader />
       ) : errorDelete ? (
         <Message variant="danger">{error}</Message>
+      ) : (
+        <></>
+      )}
+      {loadingCreate ? (
+        <Loader />
+      ) : errorCreate ? (
+        <Message variant="danger">{errorCreate}</Message>
       ) : (
         <></>
       )}
@@ -98,14 +126,6 @@ const ProductListScreen = ({ history, match }) => {
                       <></>
                     ) : (
                       <>
-                        <LinkContainer
-                          to={`/admin/product/${product._id}/edit`}
-                        >
-                          <Button variant="primary" className="btn-sm">
-                            <FaEdit style={{ fontSize: "1.2rem" }} />
-                          </Button>
-                        </LinkContainer>
-
                         <Button
                           variant="danger"
                           className="btn-sm"

@@ -67,6 +67,10 @@ const OrderScreen = ({ match }) => {
   ) : order ? (
     <>
       <h1>Order {orderId}</h1>
+      <h4>
+        [USE: 'sb-kbdxe7228736@personal.example.com' - 'Y58FM=l&amp;' if not PayPal
+        account]
+      </h4>
       <>
         <Row>
           <Col md={8}>

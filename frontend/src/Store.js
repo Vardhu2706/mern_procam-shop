@@ -9,6 +9,7 @@ import {
   productsCategoriesReducer,
   productsBrandReducer,
   productDeleteReducer,
+  productCreateReducer,
 } from "./Reducers/ProductReducers";
 
 // Importing Cart Reducers
@@ -31,13 +32,14 @@ import {
   orderDetailsReducer,
   orderPayReducer,
   orderListMyReducer,
-  allOrdersReducer,
+  orderListReducer,
 } from "./Reducers/OrderReducers";
 
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   productDelete: productDeleteReducer,
+  productCreate: productCreateReducer,
   categoryList: productsCategoriesReducer,
   brandList: productsBrandReducer,
   userLogin: userLoginReducer,
@@ -52,7 +54,7 @@ const reducer = combineReducers({
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
   orderListMy: orderListMyReducer,
-  allOrders: allOrdersReducer,
+  orderList: orderListReducer,
 });
 
 // Getting cart info from storage
