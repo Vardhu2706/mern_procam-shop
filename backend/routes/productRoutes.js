@@ -8,18 +8,14 @@ import {
   getProductsByBrand,
   deleteProduct,
   updateProduct,
-  createProduct
+  createProduct,
+  createProductReview,
 } from "../Controllers/productController.js";
 import { protect, admin } from "../Middleware/AuthMiddleware.js";
 
-// @desc    Fetch all products
-// @route   GET /api/products
-// @access  Public
 router.route("/").get(getAllProducts).post(protect, admin, createProduct);
+router.route("/:id/reviews").post(protect, createProductReview);
 
-// @desc    Fetch single product
-// @route   GET /api/products/:id
-// @access  Public
 router
   .route("/:id")
   .get(getProductByID)
