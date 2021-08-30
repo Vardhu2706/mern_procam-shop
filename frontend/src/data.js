@@ -9,7 +9,7 @@ export const categories_data = [
   {
     id: 2,
     name: "Lenses",
-    image: "images/carousel/lenses.JPG",
+    image: "images/carousel/lenses.jpg",
     link: "/categories/lenses",
     caption: "Shop Lenses",
   },
