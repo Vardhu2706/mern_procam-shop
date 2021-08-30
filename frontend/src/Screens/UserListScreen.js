@@ -3,6 +3,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Button, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
+import { Helmet } from "react-helmet";
 import Loader from "../Components/Loader";
 import { listUsers, deleteUser } from "../Actions/UserActions";
 import { FaCheck, FaTimes, FaUserEdit, FaTrash } from "react-icons/fa";
@@ -35,6 +36,9 @@ const UserListScreen = ({ history }) => {
 
   return (
     <>
+      <Helmet>
+        <title>ProCam Shop | Users</title>
+      </Helmet>
       <h1>Users</h1>
       {loading ? (
         <Loader />

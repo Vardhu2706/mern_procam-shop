@@ -3,23 +3,23 @@
 // Importing Helpers
 import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { listProducts } from "../Actions/ProductActions";
 import { useDispatch, useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 // Importing Components
 import Socials from "../Components/Socials";
 import Product from "../Components/Product";
-import Brands from "../Components/Brands";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
+import BrandCarousel from "../Components/BrandCarousel";
 
 // Functional Component
 const HomeScreen = ({ history, match }) => {
-
   // Getting Keyword from URL
   const keyword = match.params.keyword;
 
-   
   // Initializing Dispatch
   const dispatch = useDispatch();
 
@@ -35,6 +35,16 @@ const HomeScreen = ({ history, match }) => {
   // Return
   return (
     <>
+      <Helmet>
+        <title>ProCam Shop | Home</title>
+      </Helmet>
+      {!keyword ? (
+        <BrandCarousel />
+      ) : (
+        <Link className="btn btn-outline-dark mt-3" to="/">
+          <i className="fas fa-angle-left"></i> Go Back
+        </Link>
+      )}
       <Row></Row>
       <h2 className="mt-3">Featured Products</h2>
       {loading ? (
@@ -54,10 +64,6 @@ const HomeScreen = ({ history, match }) => {
       {/* Socials */}
       <Row>
         <Socials />
-      </Row>
-      <h2 className="mt-3">Shop Top Brands</h2>
-      <Row>
-        <Brands />
       </Row>
     </>
   );

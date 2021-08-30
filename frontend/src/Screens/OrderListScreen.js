@@ -6,6 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
+import { Helmet } from "react-helmet";
 import Loader from "../Components/Loader";
 import { listOrders } from "../Actions/OrderActions";
 
@@ -34,6 +35,9 @@ const OrderListScreen = ({ history }) => {
   // Return
   return (
     <>
+      <Helmet>
+        <title>ProCam Shop | Orders</title>
+      </Helmet>
       <h1>Orders</h1>
       {loading ? (
         <Loader />

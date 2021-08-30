@@ -6,6 +6,7 @@ import Message from "../Components/Message";
 import axios from "axios";
 import Loader from "../Components/Loader";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import {
   getOrderDetails,
   payOrder,
@@ -91,6 +92,13 @@ const OrderScreen = ({ match, history }) => {
     <Message variant="danger">{error}</Message>
   ) : (
     <>
+      <Helmet>
+        <title>ProCam Shop | Order </title>
+      </Helmet>
+      <p style={{ color: "red" }}>
+        Use Email: sb-kbdxe7228736@personal.example.com
+      </p>
+      <p style={{ color: "red" }}>Use Password: Y58FM=l&amp;</p>
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>
@@ -232,5 +240,3 @@ const OrderScreen = ({ match, history }) => {
 };
 
 export default OrderScreen;
-//sb-kbdxe7228736@personal.example.com
-//Y58FM=l&

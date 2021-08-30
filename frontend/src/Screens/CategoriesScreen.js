@@ -7,6 +7,7 @@ import Product from "../Components/Product";
 import { Row, Col } from "react-bootstrap";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
+import { Helmet } from "react-helmet";
 import Pagination from "../Components/Pagination";
 
 const specifyCategory = (category) => {
@@ -27,7 +28,6 @@ const specifyCategory = (category) => {
 const CategoriesScreen = ({ location }) => {
   const category = location.pathname.split("/")[2];
 
-  // TO-DO : Add Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(8);
 
@@ -56,6 +56,9 @@ const CategoriesScreen = ({ location }) => {
 
   return (
     <>
+      <Helmet>
+        <title>ProCam Shop | Categories</title>
+      </Helmet>
       <Link className="btn btn-outline-dark mt-3" to="/">
         <i className="fas fa-angle-left"></i> Go Back
       </Link>

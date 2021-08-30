@@ -12,6 +12,7 @@ import {
   Table,
   Form,
 } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Rating from "../Components/Rating";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
@@ -87,6 +88,9 @@ const ProductScreen = ({ history, match }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{`ProCam Shop | ${product.name}`}</title>
+      </Helmet>
       <Link className="btn btn-outline-dark mt-3" to="/">
         <i className="fas fa-angle-left"></i> Go Back
       </Link>

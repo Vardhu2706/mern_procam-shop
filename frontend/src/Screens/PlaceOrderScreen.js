@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message";
 import CheckoutSteps from "../Components/CheckoutSteps";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { createOrder } from "../Actions/OrderActions";
 
 const PlaceOrderScreen = ({ history }) => {
@@ -56,6 +57,9 @@ const PlaceOrderScreen = ({ history }) => {
 
   return (
     <>
+      <Helmet>
+        <title>ProCam Shop | Place Order</title>
+      </Helmet>
       <CheckoutSteps step1 step2 step3 step4 />
       <Row>
         <Col md={8}>
