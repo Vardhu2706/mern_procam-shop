@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   listProductDetails,
   createProductReview,
-} from "../Actions/ProductActions";
+} from "../Actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../Constants/productConstants";
 
 const FeaturesTable = ({ features }) => {
