@@ -2,12 +2,12 @@ const products = [
   // Cameras - Point & Shoot Cameras
   {
     name: "Olympus Tough TG-6 Digital Camera",
-    image: "/images/cameras/Olympus-Tough-TG-6-Black_01.jpg",
+    image: "public/images/cameras/Olympus-Tough-TG-6-Black_01.jpg",
     showcase: [
-      "/images/cameras/Olympus-Tough-TG-6-Black_01.jpg",
-      "/images/cameras/Olympus-Tough-TG-6-Black_02.jpg",
-      "/images/cameras/Olympus-Tough-TG-6-Black_03.jpg",
-      "/images/cameras/Olympus-Tough-TG-6-Black_04.jpg",
+      "public/images/cameras/Olympus-Tough-TG-6-Black_01.jpg",
+      "public/images/cameras/Olympus-Tough-TG-6-Black_02.jpg",
+      "public/images/cameras/Olympus-Tough-TG-6-Black_03.jpg",
+      "public/images/cameras/Olympus-Tough-TG-6-Black_04.jpg",
     ],
     features: {
       Megapixels: "12 MP",
@@ -25,12 +25,12 @@ const products = [
   },
   {
     name: "Nikon COOLPIX B600 Digital Camera",
-    image: "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_01.jpg",
+    image: "public/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_01.jpg",
     showcase: [
-      "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_01.jpg",
-      "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_02.jpg",
-      "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_03.jpg",
-      "/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_04.jpg",
+      "public/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_01.jpg",
+      "public/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_02.jpg",
+      "public/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_03.jpg",
+      "public/images/cameras/Nikon-COOLPIX-B600-Digital-Camera-Red_04.jpg",
     ],
     features: {
       "Megapixels:": "16.76 MP",
@@ -48,11 +48,11 @@ const products = [
   },
   {
     name: "Fujifilm X100F Digital Camera",
-    image: "/images/cameras/Fujifilm-X100F-Digital-Camera-Black_01.jpg",
+    image: "public/images/cameras/Fujifilm-X100F-Digital-Camera-Black_01.jpg",
     showcase: [
-      "/images/cameras/Fujifilm-X100F-Digital-Camera-Black_01.jpg",
-      "/images/cameras/Fujifilm-X100F-Digital-Camera-Black_02.jpg",
-      "/images/cameras/Fujifilm-X100F-Digital-Camera-Black_03.jpg",
+      "public/images/cameras/Fujifilm-X100F-Digital-Camera-Black_01.jpg",
+      "public/images/cameras/Fujifilm-X100F-Digital-Camera-Black_02.jpg",
+      "public/images/cameras/Fujifilm-X100F-Digital-Camera-Black_03.jpg",
     ],
     features: {
       "Megapixels:": "24.3 MP",
@@ -73,12 +73,12 @@ const products = [
   // Cameras - DSLR Cameras
   {
     name: "Canon 5D Mark IV Camera",
-    image: "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_01.jpg",
+    image: "public/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_01.jpg",
     showcase: [
-      "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_01.jpg",
-      "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_02.jpg",
-      "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_03.jpg",
-      "/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_04.jpg",
+      "public/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_01.jpg",
+      "public/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_02.jpg",
+      "public/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_03.jpg",
+      "public/images/cameras/Canon-DSLR-5D-Mark-IV-Body-Only_04.jpg",
     ],
     features: {
       "Megapixels:": "31.7 MP",
@@ -98,10 +98,11 @@ const products = [
   },
   {
     name: "Canon 6D Mark II Camera",
-    image: "/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_01.jpg",
+    image:
+      "public/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_01.jpg",
     showcase: [
-      "/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_01.jpg",
-      "/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_02.jpg",
+      "public/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_01.jpg",
+      "public/images/cameras/Canon-DSLR-Camera-EOS-6D-Mark-II-Body-Only_02.jpg",
     ],
     features: {
       "Megapixels:": "27.1  MP",
@@ -120,10 +121,10 @@ const products = [
   },
   {
     name: "Canon 77D Camera Kit",
-    image: "/images/cameras/Canon-77D-Kit-EF-S18-55mm_01.jpg",
+    image: "public/images/cameras/Canon-77D-Kit-EF-S18-55mm_01.jpg",
     showcase: [
-      "/images/cameras/Canon-77D-Kit-EF-S18-55mm_01.jpg",
-      "/images/cameras/Canon-77D-Kit-EF-S18-55mm_02.jpg",
+      "public/images/cameras/Canon-77D-Kit-EF-S18-55mm_01.jpg",
+      "public/images/cameras/Canon-77D-Kit-EF-S18-55mm_02.jpg",
     ],
     features: {
       "Megapixels:": "25.8 MP",
@@ -144,10 +145,10 @@ const products = [
   // Cameras - Mirrorless Camera
   {
     name: "Nikon Z FC Mirrorless Camera",
-    image: "/images/cameras/Nikon-Z-FC-Mirrorless-Camera_01.jpg",
+    image: "public/images/cameras/Nikon-Z-FC-Mirrorless-Camera_01.jpg",
     showcase: [
-      "/images/cameras/Nikon-Z-FC-Mirrorless-Camera_01.jpg",
-      "/images/cameras/Nikon-Z-FC-Mirrorless-Camera_02.jpg",
+      "public/images/cameras/Nikon-Z-FC-Mirrorless-Camera_01.jpg",
+      "public/images/cameras/Nikon-Z-FC-Mirrorless-Camera_02.jpg",
     ],
     features: {
       "Megapixels:": "21.51 MP",
@@ -167,13 +168,13 @@ const products = [
   {
     name: "Panasonic Lumix DC-S1R Mirrorless Camera",
     image:
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_01.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_01.jpg",
     showcase: [
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_01.jpg",
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_02.jpg",
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_03.jpg",
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_04.jpg",
-      "/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_05.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_01.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_02.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_03.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_04.jpg",
+      "public/images/cameras/Panasonic-Lumix-DC-S1R-Mirrorless-Digital-Camera-Body-Only_05.jpg",
     ],
     features: {
       "Megapixels:": "50.44 MP",
@@ -193,10 +194,10 @@ const products = [
   },
   {
     name: "Panasonic Lumix DMC-G85K Mirrorless Camera",
-    image: "/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_02.jpg",
+    image: "public/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_02.jpg",
     showcase: [
-      "/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_02.jpg",
-      "/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_01.jpg",
+      "public/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_02.jpg",
+      "public/images/cameras/Panasonic-Lumix-DMC-G85-with-12-60mm_01.jpg",
     ],
     features: {
       "Megapixels:": "50.44 MP",
@@ -219,13 +220,13 @@ const products = [
   {
     name: "Fujifilm GFX 100S Medium Format Mirrorless Camera",
     image:
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_01.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_01.jpg",
     showcase: [
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_01.jpg",
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_02.jpg",
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_03.jpg",
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_04.jpg",
-      "/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_05.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_01.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_02.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_03.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_04.jpg",
+      "public/images/cameras/Fujifilm-GFX-100S-Medium-Format-Mirrorless-Camera-Body-Only-Black_05.jpg",
     ],
     features: {
       "Megapixels:": "102 MP",
@@ -244,12 +245,12 @@ const products = [
   {
     name: "Fujifilm GFX 100 Medium Format Mirrorless Camera ",
     image:
-      "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-01.jpg",
+      "public/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-01.jpg",
     showcase: [
-      "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-01.jpg",
-      "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-02.jpg",
-      "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-03.jpg",
-      "/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-04.jpg",
+      "public/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-01.jpg",
+      "public/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-02.jpg",
+      "public/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-03.jpg",
+      "public/images/cameras/FUJIFILM-GFX-100-Medium-Format-Mirrorless-Camera-Body-Only-04.jpg",
     ],
     features: {
       "Megapixels:": "102 MP",
@@ -268,12 +269,12 @@ const products = [
   {
     name: "Fujifilm GFX 50R Medium Format Mirrorless Camera",
     image:
-      "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_01.jpg",
+      "public/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_01.jpg",
     showcase: [
-      "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_01.jpg",
-      "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_02.jpg",
-      "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_03.jpg",
-      "/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_04.jpg",
+      "public/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_01.jpg",
+      "public/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_02.jpg",
+      "public/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_03.jpg",
+      "public/images/cameras/FUJIFILM-GFX-50R-Medium-Format-Mirrorless-Camera_04.jpg",
     ],
     features: {
       "Megapixels:": "51.4 MP",
@@ -295,13 +296,13 @@ const products = [
   {
     name: "Fujifilm INSTAX Mini LiPlay Hybrid Instant Camera",
     image:
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_01.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_01.jpg",
     showcase: [
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_01.jpg",
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_02.jpg",
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_03.jpg",
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_04.jpg",
-      "/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_05.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_01.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_02.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_03.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_04.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-Mini-LiPlay-Hybrid-Instant-Camera-Elegant-Black_05.jpg",
     ],
     features: {
       "Focal Length:": "28mm",
@@ -320,10 +321,10 @@ const products = [
   {
     name: "Fujifilm INSTAX SQUARE SQ6 Camera",
     image:
-      "/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_01.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_01.jpg",
     showcase: [
-      "/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_01.jpg",
-      "/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_02.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_01.jpg",
+      "public/images/cameras/Fujifilm-INSTAX-SQUARE-SQ6-Instant-Film-Camera-Graphite-Gray_02.jpg",
     ],
     features: {
       "Focal Length:": "65.75mm",
@@ -343,12 +344,12 @@ const products = [
   {
     name: "Fujifilm INSTAX Mini 70 Instant Film Camera",
     image:
-      "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-01.jpg",
+      "public/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-01.jpg",
     showcase: [
-      "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-01.jpg",
-      "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-02.jpg",
-      "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-03.jpg",
-      "/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-04.jpg",
+      "public/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-01.jpg",
+      "public/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-02.jpg",
+      "public/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-03.jpg",
+      "public/images/cameras/FUJIFILM-INSTAX-Mini-70-Instant-Film-Camera-Canary-Yellow-04.jpg",
     ],
     features: {
       "Focal Length:": "60mm",
@@ -369,12 +370,13 @@ const products = [
   // Cameras - Video Cameras
   {
     name: "Blackmagic Design Studio Camera 4K Pro",
-    image: "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_01.jpg",
+    image:
+      "public/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_01.jpg",
     showcase: [
-      "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_01.jpg",
-      "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_02.jpg",
-      "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_03.jpg",
-      "/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_04.jpg",
+      "public/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_01.jpg",
+      "public/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_02.jpg",
+      "public/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_03.jpg",
+      "public/images/cameras/Blackmagic-Design-Studio-Camera-4K-Pro_04.jpg",
     ],
     features: {
       "Lens Mount:": "Micro Four Thirds",
@@ -394,16 +396,16 @@ const products = [
   },
   {
     name: "Sony FX3 Full-Frame Cinema Camera",
-    image: "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_01.jpg",
+    image: "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_01.jpg",
     showcase: [
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_01.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_02.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_03.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_04.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_05.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_06.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_07.jpg",
-      "/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_08.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_01.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_02.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_03.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_04.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_05.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_06.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_07.jpg",
+      "public/images/cameras/Sony-FX3-Full-Frame-Cinema-Camera_08.jpg",
     ],
     features: {
       1: "12.1MP Full-Frame CMOS Exmor R Sensor",
@@ -427,14 +429,14 @@ const products = [
   {
     name: "Panasonic AG-CX8ED 4K Professional Video Camera",
     image:
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_01.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_01.jpg",
     showcase: [
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_01.jpg",
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_02.jpg",
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_03.jpg",
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_04.jpg",
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_05.jpg",
-      "/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_06.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_01.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_02.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_03.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_04.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_05.jpg",
+      "public/images/cameras/Panasonic-AG-CX8ED-4K-Professional-Video-Camera_06.jpg",
     ],
     features: {
       1: "Wide 25mm* and Optical 24x Zoom Lens",
@@ -459,10 +461,10 @@ const products = [
   // Lenses - DSLR Lens
   {
     name: "Canon EF-S 18-55mm f/4-5.6 IS STM Lens",
-    image: "/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-01.jpg",
+    image: "public/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-01.jpg",
     showcase: [
-      "/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-01.jpg",
-      "/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-02.jpg",
+      "public/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-01.jpg",
+      "public/images/lenses/Canon-EF-S-18-55mm-f4-5.6-IS-STM-Lens-02.jpg",
     ],
     features: {
       "Focal Length": "18 to 55mm",
@@ -482,12 +484,12 @@ const products = [
   },
   {
     name: "Nikon AF-S DX 16-85mm f/3.5-5.6G ED VR Lens",
-    image: "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-01.jpg",
+    image: "public/images/lenses/Nikon-AF-S-DX-16-85mm-f3-01.jpg",
     showcase: [
-      "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-01.jpg",
-      "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-02.jpg",
-      "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-03.jpg",
-      "/images/lenses/Nikon-AF-S-DX-16-85mm-f3-04.jpg",
+      "public/images/lenses/Nikon-AF-S-DX-16-85mm-f3-01.jpg",
+      "public/images/lenses/Nikon-AF-S-DX-16-85mm-f3-02.jpg",
+      "public/images/lenses/Nikon-AF-S-DX-16-85mm-f3-03.jpg",
+      "public/images/lenses/Nikon-AF-S-DX-16-85mm-f3-04.jpg",
     ],
     features: {
       "Focal Length": "16-85mm",
@@ -507,10 +509,10 @@ const products = [
   {
     name: "Sigma 500mm f/4 DG OS HSM Sports Lens",
     image:
-      "/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
+      "public/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
     showcase: [
-      "/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
-      "/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
+      "public/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
+      "public/images/lenses/Sigma-500mm-f4-DG-OS-HSM-Sports-Lens-for-Canon-EF-01.jpg",
     ],
     features: {
       "Focal Length": "500mm",
@@ -532,11 +534,11 @@ const products = [
   // Lenses - Mirrorless Lenses
   {
     name: "Fujifilm XF 18mm f/1.4 R LM WR Lens",
-    image: "/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-01.jpg",
+    image: "public/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-01.jpg",
     showcase: [
-      "/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-01.jpg",
-      "/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-02.jpg",
-      "/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-03.jpg",
+      "public/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-01.jpg",
+      "public/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-02.jpg",
+      "public/images/lenses/Fujifilm-XF-18mm-f1.4-R-LM-WR-Lens-03.jpg",
     ],
     features: {
       "Focal Length": "18mm",
@@ -556,10 +558,10 @@ const products = [
   },
   {
     name: "Nikon Z Micro 50mm f/2.8 Lens",
-    image: "/images/lenses/Nikon-Z-Micro-50mm-f2-01.jpg",
+    image: "public/images/lenses/Nikon-Z-Micro-50mm-f2-01.jpg",
     showcase: [
-      "/images/lenses/Nikon-Z-Micro-50mm-f2-01.jpg",
-      "/images/lenses/Nikon-Z-Micro-50mm-f2-02.jpg",
+      "public/images/lenses/Nikon-Z-Micro-50mm-f2-01.jpg",
+      "public/images/lenses/Nikon-Z-Micro-50mm-f2-02.jpg",
     ],
     features: {
       "Focal Length": "50mm",
@@ -579,10 +581,10 @@ const products = [
   },
   {
     name: "Nikon Z Micro 105mm f/2.8 VR S Lens",
-    image: "/images/lenses/Nikon-Z-Micro-105mm-f2-01.jpg",
+    image: "public/images/lenses/Nikon-Z-Micro-105mm-f2-01.jpg",
     showcase: [
-      "/images/lenses/Nikon-Z-Micro-105mm-f2-01.jpg",
-      "/images/lenses/Nikon-Z-Micro-105mm-f2-02.jpg",
+      "public/images/lenses/Nikon-Z-Micro-105mm-f2-01.jpg",
+      "public/images/lenses/Nikon-Z-Micro-105mm-f2-02.jpg",
     ],
     features: {
       "Focal Length": "105mm",
@@ -604,10 +606,10 @@ const products = [
   // Lenses - Medium Format
   {
     name: "Fujifilm GF 80mm f/1.7 R WR Lens",
-    image: "/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_01.jpg",
+    image: "public/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_01.jpg",
     showcase: [
-      "/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_01.jpg",
-      "/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_02.jpg",
+      "public/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_01.jpg",
+      "public/images/lenses/Fujifilm-GF-80mm-f1.7-R-WR-Lens_02.jpg",
     ],
     features: {
       "Focal Length": "80mm",
@@ -627,11 +629,11 @@ const products = [
   },
   {
     name: "Fujifilm GF 50mm F/3.5 R LM WR Lens",
-    image: "/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_01.jpg",
+    image: "public/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_01.jpg",
     showcase: [
-      "/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_01.jpg",
-      "/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_02.jpg",
-      "/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_03.jpg",
+      "public/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_01.jpg",
+      "public/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_02.jpg",
+      "public/images/lenses/Fujifilm-50mm-F3.5-R-LM-WR-Lens_03.jpg",
     ],
     features: {
       "Focal Length": "50mm",
@@ -651,11 +653,11 @@ const products = [
   },
   {
     name: "Fujifilm GF 32-64mm f/4 R LM WR Lens",
-    image: "/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_01.jpg",
+    image: "public/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_01.jpg",
     showcase: [
-      "/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_01.jpg",
-      "/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_03.jpg",
-      "/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_04.jpg",
+      "public/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_01.jpg",
+      "public/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_03.jpg",
+      "public/images/lenses/Fujifilm-GF-32-64mm-f4-R-LM-WR-Lens_04.jpg",
     ],
     features: {
       "Focal Length": "32 to 64mm",
@@ -678,9 +680,9 @@ const products = [
   {
     name: "Nisi 67mm V.ND 1.5-5 stop Filter",
     image:
-      "/images/lenses/NiSi-67mm-Variable-Neutral-Density-0.45-to-1.5-Filter.jpg",
+      "public/images/lenses/NiSi-67mm-Variable-Neutral-Density-0.45-to-1.5-Filter.jpg",
     showcase: [
-      "/images/lenses/NiSi-67mm-Variable-Neutral-Density-0.45-to-1.5-Filter.jpg",
+      "public/images/lenses/NiSi-67mm-Variable-Neutral-Density-0.45-to-1.5-Filter.jpg",
     ],
     features: {
       1: "Variable 0.45-1.5 Neutral Density Filter",
@@ -704,10 +706,10 @@ const products = [
   },
   {
     name: "Hoya 52mm UX UV Filter",
-    image: "/images/lenses/Hoya-52mm-UX-UV-Filter-01.jpg",
+    image: "public/images/lenses/Hoya-52mm-UX-UV-Filter-01.jpg",
     showcase: [
-      "/images/lenses/Hoya-52mm-UX-UV-Filter-01.jpg",
-      "/images/lenses/Hoya-52mm-UX-UV-Filter-02.jpg",
+      "public/images/lenses/Hoya-52mm-UX-UV-Filter-01.jpg",
+      "public/images/lenses/Hoya-52mm-UX-UV-Filter-02.jpg",
     ],
     features: {
       1: "Anti-reflection coating",
@@ -725,21 +727,21 @@ const products = [
   {
     name: "NiSi V6 Pro Starter Filter Kit III with Circular Polarizer Filter",
     image:
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_01.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_01.jpg",
     showcase: [
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_01.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_02.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_03.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_04.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_05.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_06.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_07.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_08.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_09.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_10.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_11.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_12.jpg",
-      "/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_13.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_01.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_02.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_03.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_04.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_05.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_06.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_07.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_08.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_09.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_10.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_11.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_12.jpg",
+      "public/images/lenses/NiSi-100mm-Starter-Kit-Plus-Third-Generation-III-with-V6-and-Landscape-CPL_13.jpg",
     ],
     features: {
       1: "Features the new NiSi V6 Holder",
@@ -762,11 +764,11 @@ const products = [
   // Action Cameras - Cameras
   {
     name: "Insta360 GO2 Action Camera",
-    image: "/images/action/Insta360-GO2-Action-Camera-01.jpg",
+    image: "public/images/action/Insta360-GO2-Action-Camera-01.jpg",
     showcase: [
-      "/images/action/Insta360-GO2-Action-Camera-01.jpg",
-      "/images/action/Insta360-GO2-Action-Camera-02.jpg",
-      "/images/action/Insta360-GO2-Action-Camera-03.jpg",
+      "public/images/action/Insta360-GO2-Action-Camera-01.jpg",
+      "public/images/action/Insta360-GO2-Action-Camera-02.jpg",
+      "public/images/action/Insta360-GO2-Action-Camera-03.jpg",
     ],
     features: {
       Camera: "9 MP",
@@ -787,12 +789,12 @@ const products = [
   },
   {
     name: "GoPro HERO9 Black Action Camera",
-    image: "/images/action/GoPro-HERO9-Black-Action-Camera-01.jpg",
+    image: "public/images/action/GoPro-HERO9-Black-Action-Camera-01.jpg",
     showcase: [
-      "/images/action/GoPro-HERO9-Black-Action-Camera-01.jpg",
-      "/images/action/GoPro-HERO9-Black-Action-Camera-02.jpg",
-      "/images/action/GoPro-HERO9-Black-Action-Camera-03.jpg",
-      "/images/action/GoPro-HERO9-Black-Action-Camera-04.jpg",
+      "public/images/action/GoPro-HERO9-Black-Action-Camera-01.jpg",
+      "public/images/action/GoPro-HERO9-Black-Action-Camera-02.jpg",
+      "public/images/action/GoPro-HERO9-Black-Action-Camera-03.jpg",
+      "public/images/action/GoPro-HERO9-Black-Action-Camera-04.jpg",
     ],
     features: {
       Camera: "23.6 MP",
@@ -812,11 +814,11 @@ const products = [
   },
   {
     name: "Insta360 One R (One Inch Leica Edition) Action Camera",
-    image: "/images/action/Insta360-ONE-R-1-Edition-01.jpg",
+    image: "public/images/action/Insta360-ONE-R-1-Edition-01.jpg",
     showcase: [
-      "/images/action/Insta360-ONE-R-1-Edition-01.jpg",
-      "/images/action/Insta360-ONE-R-1-Edition-02.jpg",
-      "/images/action/Insta360-ONE-R-1-Edition-03.jpg",
+      "public/images/action/Insta360-ONE-R-1-Edition-01.jpg",
+      "public/images/action/Insta360-ONE-R-1-Edition-02.jpg",
+      "public/images/action/Insta360-ONE-R-1-Edition-03.jpg",
     ],
     features: {
       "Built-In-Mic": "No",
@@ -838,12 +840,12 @@ const products = [
   {
     name: "Insta360 One R Lens Guard for 360 Dual-Lens Mod",
     image:
-      "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_01.jpg",
+      "public/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_01.jpg",
     showcase: [
-      "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_01.jpg",
-      "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_02.jpg",
-      "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_03.jpg",
-      "/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_04.jpg",
+      "public/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_01.jpg",
+      "public/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_02.jpg",
+      "public/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_03.jpg",
+      "public/images/action/Insta360-One-R-Lens-Guard-for-360-Dual-Lens-Mod_04.jpg",
     ],
     features: {
       1: "Hardened, reinforced lens shields",
@@ -859,11 +861,11 @@ const products = [
   },
   {
     name: "Insta360 ONE R Boosted Battery Base",
-    image: "/images/action/Insta360-ONE-R-Boosted-Battery-Base-01.jpg",
+    image: "public/images/action/Insta360-ONE-R-Boosted-Battery-Base-01.jpg",
     showcase: [
-      "/images/action/Insta360-ONE-R-Boosted-Battery-Base-01.jpg",
-      "/images/action/Insta360-ONE-R-Boosted-Battery-Base-02.jpg",
-      "/images/action/Insta360-ONE-R-Boosted-Battery-Base-03.jpg",
+      "public/images/action/Insta360-ONE-R-Boosted-Battery-Base-01.jpg",
+      "public/images/action/Insta360-ONE-R-Boosted-Battery-Base-02.jpg",
+      "public/images/action/Insta360-ONE-R-Boosted-Battery-Base-03.jpg",
     ],
     features: {
       Capacity: "2380 mAh",
@@ -879,10 +881,11 @@ const products = [
   },
   {
     name: "Ulanzi Gp-6 Cold Shoe for Action Camera",
-    image: "/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-01.jpg",
+    image:
+      "public/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-01.jpg",
     showcase: [
-      "/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-01.jpg",
-      "/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-02.jpg",
+      "public/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-01.jpg",
+      "public/images/action/Ulanzi-Gp-6-Cold-Shoe-for-Action-Camera-02.jpg",
     ],
     features: {
       1: "Universal Cold Shoe Mount",
@@ -901,17 +904,17 @@ const products = [
   {
     name: "RollMaster 4K Wireless Video Transmission System",
     image:
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-01.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-01.jpg",
     showcase: [
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-01.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-01.jpg",
 
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-02.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-02.jpg",
 
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-03.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-03.jpg",
 
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-04.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-04.jpg",
 
-      "/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-05.jpg",
+      "public/images/audio/RollMaster-4K-Wireless-Video-Transmission-System-05.jpg",
     ],
     features: {
       1: "4K 30fps Supported",
@@ -932,18 +935,19 @@ const products = [
   },
   {
     name: "Rode Vlogger Filmmaking Kit",
-    image: "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-01.jpg",
+    image:
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-01.jpg",
     showcase: [
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-01.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-02.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-03.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-04.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-05.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-06.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-07.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-08.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-08.jpg",
-      "/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-10.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-01.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-02.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-03.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-04.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-05.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-06.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-07.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-08.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-08.jpg",
+      "public/images/audio/Rode-Vlogger-Kit-iOS-Edition-Filmmaking-Kit-10.jpg",
     ],
     features: {
       "Sound Field": "Mono",
@@ -963,12 +967,12 @@ const products = [
   },
   {
     name: "Sony LV-1 Stereo Lavalier Microphone",
-    image: "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-01.jpg",
+    image: "public/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-01.jpg",
     showcase: [
-      "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-01.jpg",
-      "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-02.jpg",
-      "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-03.jpg",
-      "/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-04.jpg",
+      "public/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-01.jpg",
+      "public/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-02.jpg",
+      "public/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-03.jpg",
+      "public/images/audio/Sony-LV-1-Stereo-Lavalier-Microphone-04.jpg",
     ],
     features: {
       "Sound Field": "Stereo",
@@ -989,15 +993,15 @@ const products = [
   // Pro Audio - Recorders
   {
     name: "Tascam DR-22WL Portable Handheld Recorder with Wi-Fi",
-    image: "/images/audio/Tascam-DR-22WL_01.jpg",
+    image: "public/images/audio/Tascam-DR-22WL_01.jpg",
     showcase: [
-      "/images/audio/Tascam-DR-22WL_01.jpg",
-      "/images/audio/Tascam-DR-22WL_02.jpg",
-      "/images/audio/Tascam-DR-22WL_03.jpg",
-      "/images/audio/Tascam-DR-22WL_04.jpg",
-      "/images/audio/Tascam-DR-22WL_05.jpg",
-      "/images/audio/Tascam-DR-22WL_06.jpg",
-      "/images/audio/Tascam-DR-22WL_07.jpg",
+      "public/images/audio/Tascam-DR-22WL_01.jpg",
+      "public/images/audio/Tascam-DR-22WL_02.jpg",
+      "public/images/audio/Tascam-DR-22WL_03.jpg",
+      "public/images/audio/Tascam-DR-22WL_04.jpg",
+      "public/images/audio/Tascam-DR-22WL_05.jpg",
+      "public/images/audio/Tascam-DR-22WL_06.jpg",
+      "public/images/audio/Tascam-DR-22WL_07.jpg",
     ],
     features: {
       1: "Wi-Fi Enabled Control and File Transfers",
@@ -1019,13 +1023,13 @@ const products = [
   {
     name: "Zoom H8 Recorder",
     image:
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-01.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-01.jpg",
     showcase: [
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-01.jpg",
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-02.jpg",
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-03.jpg",
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-04.jpg",
-      "/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-05.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-01.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-02.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-03.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-04.jpg",
+      "public/images/audio/Zoom-H8-8-Input-12-Track-Portable-Handy-Recorder-05.jpg",
     ],
     features: {
       "Number of Tracks": "WAV: 12 (8 Inputs + Stereo Mix)",
@@ -1047,12 +1051,12 @@ const products = [
   },
   {
     name: "LiveU Solo SDI/HDMI Video/Audio Encoder",
-    image: "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
+    image: "public/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
     showcase: [
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_02.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_03.jpg",
-      "/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_04.jpg",
+      "public/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_01.jpg",
+      "public/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_02.jpg",
+      "public/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_03.jpg",
+      "public/images/audio/LiveU-Solo-HDMI-VideoAudio-Encoder_04.jpg",
     ],
     features: {
       1: "Compact All-in-One Streaming Solution",
@@ -1072,12 +1076,13 @@ const products = [
   // Pro Audio - Speakers/Headphones
   {
     name: "Sennheiser HD 215 Stereo Headphones",
-    image: "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_01.jpg",
+    image:
+      "public/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_01.jpg",
     showcase: [
-      "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_01.jpg",
-      "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_02.jpg",
-      "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_03.jpg",
-      "/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_04.jpg",
+      "public/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_01.jpg",
+      "public/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_02.jpg",
+      "public/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_03.jpg",
+      "public/images/audio/Sennheiser-HD-215-Over-Ear-Stereo-Headphones_04.jpg",
     ],
     features: {
       1: "Excellent stereo sound",
@@ -1095,11 +1100,12 @@ const products = [
   },
   {
     name: "Sony MHC-V21D Bluetooth Wireless Music System",
-    image: "/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-01.jpg",
+    image:
+      "public/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-01.jpg",
     showcase: [
-      "/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-01.jpg",
-      "/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-02.jpg",
-      "/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-03.jpg",
+      "public/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-01.jpg",
+      "public/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-02.jpg",
+      "public/images/audio/Sony-MHC-V21D-Bluetooth-Wireless-Music-System-03.jpg",
     ],
     features: {
       1: "Single-Unit Configuration",
@@ -1123,12 +1129,12 @@ const products = [
   {
     name: "Sennheiser HD 300 PRO Monitoring Headphones",
     image:
-      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
+      "public/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
     showcase: [
-      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
-      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_02.jpg",
-      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_03.jpg",
-      "/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_04.jpg",
+      "public/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_01.jpg",
+      "public/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_02.jpg",
+      "public/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_03.jpg",
+      "public/images/audio/Sennheiser-HD-300-PRO-Over-Ear-Monitoring-Headphones_04.jpg",
     ],
     features: {
       Foldable: "Yes",
