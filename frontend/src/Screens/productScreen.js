@@ -21,7 +21,7 @@ import {
   listProductDetails,
   createProductReview,
 } from "../Actions/ProductActions";
-import { PRODUCT_CREATE_REVIEW_RESET } from "../Constants/ProductConstants";
+import { PRODUCT_CREATE_REVIEW_RESET } from "../Constants/productConstants";
 
 const FeaturesTable = ({ features }) => {
   return (
