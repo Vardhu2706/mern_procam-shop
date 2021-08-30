@@ -1,49 +1,38 @@
+// Home Screen
+
 // Importing Helpers
 import React, { useEffect } from "react";
-
 import { Row, Col } from "react-bootstrap";
 import { listProducts } from "../Actions/ProductActions";
 import { useDispatch, useSelector } from "react-redux";
+
+// Importing Components
 import Socials from "../Components/Socials";
 import Product from "../Components/Product";
 import Brands from "../Components/Brands";
 import Loader from "../Components/Loader";
 import Message from "../Components/Message";
 
-function shuffle(array) {
-  if (array) {
-    var currentIndex = array.length,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (currentIndex !== 0) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
-
-    return array;
-  }
-}
-
 // Functional Component
-const HomeScreen = ({ history }) => {
+const HomeScreen = ({ history, match }) => {
+
+  // Getting Keyword from URL
+  const keyword = match.params.keyword;
+
+   
+  // Initializing Dispatch
   const dispatch = useDispatch();
+
+  // Getting Product List from redux store
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
 
-  let shuffled_products = shuffle(products);
-
+  // Use Effect
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
+  // Return
   return (
     <>
       <Row></Row>
@@ -54,7 +43,7 @@ const HomeScreen = ({ history }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Row>
-          {shuffled_products.slice(0, 12).map((product) => (
+          {products.slice(0, 12).map((product) => (
             <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
               <Product product={product} />
             </Col>

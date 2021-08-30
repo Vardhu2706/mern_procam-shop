@@ -2,7 +2,7 @@ import express from "express";
 import asyncHandler from "express-async-handler";
 const router = express.Router();
 import {
-  getAllProducts,
+  getProducts,
   getProductByID,
   getProductsByCategory,
   getProductsByBrand,
@@ -13,7 +13,7 @@ import {
 } from "../Controllers/productController.js";
 import { protect, admin } from "../Middleware/AuthMiddleware.js";
 
-router.route("/").get(getAllProducts).post(protect, admin, createProduct);
+router.route("/").get(getProducts).post(protect, admin, createProduct);
 router.route("/:id/reviews").post(protect, createProductReview);
 
 router
