@@ -50,10 +50,6 @@ const getProductsByCategory = asyncHandler(async (req, res) => {
   }
 });
 
-const getProductsByBrand = asyncHandler(async (req, res) => {
-  const products = await Product.find({ brand: req.params.brand });
-  res.json(products);
-});
 
 // Create a product
 const createProduct = asyncHandler(async (req, res) => {
@@ -158,7 +154,6 @@ const createProductReview = asyncHandler(async (req, res) => {
 export {
   getProductByID,
   getProductsByCategory,
-  getProductsByBrand,
   deleteProduct,
   getProducts,
   createProduct,

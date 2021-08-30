@@ -5,7 +5,6 @@ import {
   getProducts,
   getProductByID,
   getProductsByCategory,
-  getProductsByBrand,
   deleteProduct,
   updateProduct,
   createProduct,
@@ -26,11 +25,6 @@ router
 // @route   GET /api/products/categories/:category
 // @access  Public
 router.route("/categories/:category").get(getProductsByCategory);
-
-// @desc    Fetch products by brand
-// @route   GET /api/products/brands/:brand
-// @access  Public
-router.route("/brands/:brand").get(getProductsByBrand);
 
 router.get("/");
 

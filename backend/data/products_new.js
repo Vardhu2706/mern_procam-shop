@@ -751,7 +751,7 @@ const products = [
       7: "Ultimate starter kit for getting started with ND filters and landscape photography",
     },
     subCategory: "Filters & Adapters",
-    brand: "NiSi",
+    brand: "Nisi",
     category: "lenses",
     price: 499,
     countInStock: 10,
