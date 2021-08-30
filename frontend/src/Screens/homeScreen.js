@@ -14,7 +14,6 @@ import Product from "../Components/product";
 import Loader from "../Components/loader";
 import Message from "../Components/message";
 import BrandCarousel from "../Components/brandCarousel";
-
 // Functional Component
 const HomeScreen = ({ history, match }) => {
   // Getting Keyword from URL
